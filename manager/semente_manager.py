@@ -1,24 +1,11 @@
-# Classe base Insumo
-class Insumo:
-    def __init__(self, nome, descricao, quantidade, preco_unitario):
-        self.nome = nome  # Nome do insumo
-        self.descricao = descricao  # Descrição do insumo
-        self.quantidade = quantidade  # Quantidade disponível
-        self.preco_unitario = preco_unitario  # Preço unitário do insumo
-
-    def calcular_valor_total(self):
-        # Método para calcular o valor total do insumo baseado na quantidade
-        return self.quantidade * self.preco_unitario
-
-    def __str__(self):
-        # Método para representar o insumo de maneira legível
-        return f"Insumo: {self.nome}, Descrição: {self.descricao}, Quantidade: {self.quantidade}, Preço Unitário: {self.preco_unitario}"
-
 # Classe derivada Semente herda de Insumo
+from manager.adubo_manager import Insumo
+
+
 class Semente(Insumo):
-    def __init__(self, nome, descricao, quantidade, preco_unitario, tipo, origem, validade):
+    def __init__(self, nome, descricao, quantidade, unidade, tipo, origem, validade):
         # Chama o construtor da classe base Insumo
-        super().__init__(nome, descricao, quantidade, preco_unitario)
+        super().__init__(nome, descricao, quantidade, unidade)
         self.tipo = tipo  # Tipo da semente (ex.: "milho", "feijão")
         self.origem = origem  # Origem da semente (ex.: "Brasil", "Argentina")
         self.validade = validade  # Data de validade da semente
