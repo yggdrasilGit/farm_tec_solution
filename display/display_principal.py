@@ -11,6 +11,7 @@ class Menu:
             print("\nMenu Principal:")
             print("1. Tabalhar com Cultura")
             print("2. Tabalhar com Área de Plantio")
+            print("3. Trabalhar com Insumo")
             print("0. Sair")
             
             # Solicita ao usuário para escolher uma opção
@@ -20,6 +21,8 @@ class Menu:
                 MenuCultura().menu_cultura()   # Exibe a lista de culturas
             elif opcao == '2':
                 MenuAreaPlantada().menu_area()
+            elif opcao == '2':
+                pass
             elif opcao == '0':
                 print("\nSaindo\n")
                 break # Exibe as culturas cadastradas

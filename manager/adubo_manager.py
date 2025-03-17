@@ -1,21 +1,10 @@
-# Classe base Insumo
-class Insumo:
-    def __init__(self, nome, descricao, quantidade, preco_unitario):
-        self.nome = nome  # Nome do insumo
-        self.descricao = descricao  # Descrição do insumo
-        self.quantidade = quantidade  # Quantidade disponível
-        self.preco_unitario = preco_unitario  # Preço unitário do insumo
 
-    def calcular_valor_total(self):
-        # Método para calcular o valor total do insumo baseado na quantidade
-        return self.quantidade * self.preco_unitario
-
-    def __str__(self):
-        # Método para representar o insumo de maneira legível
-        return f"Insumo: {self.nome}, Descrição: {self.descricao}, Quantidade: {self.quantidade}, Preço Unitário: {self.preco_unitario}"
 
 # Classe derivada Adubo herda de Insumo
-class Adubo(Insumo):
+from manager.insumos_manager import InsumoManager
+
+
+class Adubo(InsumoManager):
     def __init__(self, nome, descricao, quantidade, preco_unitario, tipo, forma_aplicacao, dosagem_recomendada):
         # Chama o construtor da classe base Insumo
         super().__init__(nome, descricao, quantidade, preco_unitario)

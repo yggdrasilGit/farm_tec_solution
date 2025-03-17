@@ -1,8 +1,8 @@
 # Classe derivada Semente herda de Insumo
-from manager.adubo_manager import Insumo
+from manager.insumos_manager import InsumoManager
 
 
-class Semente(Insumo):
+class Semente(InsumoManager):
     def __init__(self, nome, descricao, quantidade, unidade, tipo, origem, validade):
         # Chama o construtor da classe base Insumo
         super().__init__(nome, descricao, quantidade, unidade)

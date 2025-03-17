@@ -8,7 +8,12 @@ class Insumo:
 
     def __str__(self):
         # Método para representar o insumo de maneira legível
-        return f"Insumo: {self.nome}, Descrição: {self.descricao}, Quantidade: {self.quantidade}, Unidade: {self.unidade}"
+        return "\n".join([
+            f"Insumo: {self.nome}",
+            f"Descrição: {self.descricao}",
+            f"Quantidade: {self.quantidade} {self.unidade}"
+        ])
+
 
 # Classe para gerenciar os insumos
 class InsumoManager:
@@ -24,7 +29,7 @@ class InsumoManager:
     def read(self, nome):
         # Buscar insumo pelo nome
         for insumo in self.insumos:
-            if insumo.nome == nome:
+            if insumo["nome"] == nome:
                 return insumo
         return None
 
@@ -33,11 +38,11 @@ class InsumoManager:
         insumo = self.read(nome)
         if insumo:
             if descricao:
-                insumo.descricao = descricao
+                insumo["descricao"] = descricao
             if quantidade:
-                insumo.quantidade = quantidade
+                insumo[quantidade] = quantidade
             if unidade:
-                insumo.unidade = unidade
+                insumo[unidade] = unidade
             print(f"Insumo '{nome}' atualizado com sucesso!")
         else:
             print(f"Insumo '{nome}' não encontrado.")
@@ -58,30 +63,3 @@ class InsumoManager:
         else:
             for insumo in self.insumos:
                 print(insumo)
-
-# Exemplo de uso
-manager = InsumoManager()
-
-# Criando insumos
-manager.create("Fertilizante A", "Fertilizante para plantas", 50, "kg")
-manager.create("Semente B", "Semente de milho", 200, "unidade")
-
-# Listando todos os insumos
-print("\nTodos os Insumos:")
-manager.list_all()
-
-# Lendo um insumo específico
-print("\nLendo Insumo 'Semente B':")
-insumo = manager.read("Semente B")
-if insumo:
-    print(insumo)
-
-# Atualizando um insumo
-manager.update("Fertilizante A", quantidade=60)
-
-# Deletando um insumo
-manager.delete("Semente B")
-
-# Listando todos os insumos após o delete
-print("\nTodos os Insumos após o delete:")
-manager.list_all()
