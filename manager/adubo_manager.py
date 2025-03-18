@@ -1,13 +1,10 @@
+from manager.insumo_manage import Insumo
 
 
-# Classe derivada Adubo herda de Insumo
-from manager.insumos_manager import InsumoManager
-
-
-class Adubo(InsumoManager):
-    def __init__(self, nome, descricao, quantidade, preco_unitario, tipo, forma_aplicacao, dosagem_recomendada):
+class Adubo(Insumo):
+    def __init__(self, nome, descricao, quantidade, unidade, tipo, forma_aplicacao, dosagem_recomendada):
         # Chama o construtor da classe base Insumo
-        super().__init__(nome, descricao, quantidade, preco_unitario)
+        super().__init__(nome, descricao, quantidade, unidade)
         self.tipo = tipo  # Tipo de adubo (ex.: "Orgânico", "Mineral")
         self.forma_aplicacao = forma_aplicacao  # Forma de aplicação (ex.: "Granulado", "Líquido")
         self.dosagem_recomendada = dosagem_recomendada  # Dosagem recomendada por área
@@ -21,10 +18,10 @@ class Adubo(InsumoManager):
         return f"Adubo: {self.tipo}, Forma de Aplicação: {self.forma_aplicacao}, {super().__str__()}, Dosagem recomendada: {self.dosagem_recomendada}"
 
 # Criando um adubo que é um insumo
-adubo1 = Adubo("Composto Orgânico", "Adubo orgânico para enriquecer o solo", 50, 30.0, "Orgânico", "Granulado", "300g/m²")
+# adubo1 = Adubo("Composto Orgânico", "Adubo orgânico para enriquecer o solo", 50, 30.0, "Orgânico", "Granulado", "300g/m²")
 
 # Imprimindo o adubo (incluindo as informações do insumo)
-print(adubo1)
+# print(adubo1)
 
 # Calculando o valor total
-print(f"Valor Total: R${adubo1.calcular_valor_total()}")
+# print(f"Valor Total: R${adubo1.calcular_valor_total()}")

@@ -1,27 +1,22 @@
 # Classe Fertilizante que herda de Insumo
-from manager.insumos_manager import Insumo
+from manager.insumo_manage import Insumo
 
 
 class Fertilizante(Insumo):
-    def __init__(self, nome, descricao, quantidade, unidade,
-                preco_unitario, tipo, composicao, dosagem_recomendada):
-        # Chama o construtor da classe base Insumo
+    def __init__(self, nome, descricao, quantidade, unidade, preco_unitario, tipo, composicao, dosagem_recomendada):
         super().__init__(nome, descricao, quantidade, unidade)
-        self.preco_unitario = preco_unitario  # Preço unitário do fertilizante
-        self.tipo = tipo  # Tipo do fertilizante (ex.: "Nitrogenado", "Fosfatado")
-        self.composicao = composicao  # Composição química do fertilizante (ex.: "NPK 10-20-10")
-        self.dosagem_recomendada = dosagem_recomendada  # Dosagem recomendada por área
+        self.preco_unitario = preco_unitario
+        self.tipo = tipo
+        self.composicao = composicao
+        self.dosagem_recomendada = dosagem_recomendada
 
     def verificar_dosagem(self):
-        # Método para verificar a dosagem recomendada para uso
         return f"Dosagem recomendada: {self.dosagem_recomendada}"
 
     def calcular_valor_total(self):
-        # Método para calcular o valor total
         return self.quantidade * self.preco_unitario
 
     def __str__(self):
-        # Método para representar o fertilizante de maneira legível
         return "\n".join([
             f"Fertilizante: {self.tipo}",
             f"Composição: {self.composicao}",

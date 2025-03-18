@@ -1,5 +1,6 @@
 from display.display_cadastro_cultura import MenuCultura
 from display.display_area import MenuAreaPlantada
+from display.display_insumo import InsumoMenu
 
 class Menu:
     def __init__(self):
@@ -21,8 +22,8 @@ class Menu:
                 MenuCultura().menu_cultura()   # Exibe a lista de culturas
             elif opcao == '2':
                 MenuAreaPlantada().menu_area()
-            elif opcao == '2':
-                pass
+            elif opcao == '3':
+                InsumoMenu().exibir_menu()
             elif opcao == '0':
                 print("\nSaindo\n")
                 break # Exibe as culturas cadastradas

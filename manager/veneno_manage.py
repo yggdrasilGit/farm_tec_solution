@@ -1,6 +1,6 @@
-from manager.insumos_manager import InsumoManager
+from manager.insumo_manage import Insumo
 
-class Veneno(InsumoManager):
+class Veneno(Insumo):
     def __init__(self, 
                  nome, 
                  descricao, 
@@ -32,7 +32,7 @@ class Veneno(InsumoManager):
 veneno1 = Veneno("Herbicida X", "Herbicida para controle de plantas daninhas", 100, 50.0, "Herbicida", "Alta", "Fazenda")
 
 # Imprimindo o veneno (incluindo as informações do insumo)
-print(veneno1)
+# print(veneno1)
 
 # Calculando o valor total
-print(f"Valor Total: R${veneno1.calcular_valor_total()}")
+# print(f"Valor Total: R${veneno1.calcular_valor_total()}")
