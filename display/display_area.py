@@ -47,5 +47,4 @@ class MenuAreaPlantada:
     
     def calculador(self):
         executar = self.calculadora.executar() 
-        print(executar[0], executar[1])
         self.area_plantada.adicionar_area(executar[0], executar[1])
