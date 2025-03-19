@@ -1,0 +1,62 @@
+[
+    {
+        "cultura": "soja",
+        "area_plantada": 78.0,
+        "insumos_utilizados": [
+            {
+                "insumo": "Fertilizante_1",
+                "descricao": "Orgânico",
+                "quantidade_necessaria": 78.0,
+                "unidade": "kg"
+            },
+            {
+                "insumo": "Adubo_1",
+                "descricao": "Químico",
+                "quantidade_necessaria": 78.0,
+                "unidade": "kg"
+            },
+            {
+                "insumo": "Veneno_1",
+                "descricao": "Fungicida",
+                "quantidade_necessaria": 78.0,
+                "unidade": "litro"
+            },
+            {
+                "insumo": "Semente_1",
+                "descricao": "Milho",
+                "quantidade_necessaria": 78.0,
+                "unidade": "kg"
+            }
+        ]
+    },
+    {
+        "cultura": "soja",
+        "area_plantada": 78.0,
+        "insumos_utilizados": [
+            {
+                "insumo": "Fertilizante_1",
+                "descricao": "Orgânico",
+                "quantidade_necessaria": 312.0,
+                "unidade": "kg"
+            },
+            {
+                "insumo": "Adubo_1",
+                "descricao": "Químico",
+                "quantidade_necessaria": 312.0,
+                "unidade": "kg"
+            },
+            {
+                "insumo": "Veneno_1",
+                "descricao": "Fungicida",
+                "quantidade_necessaria": 312.0,
+                "unidade": "litro"
+            },
+            {
+                "insumo": "Semente_3",
+                "descricao": "Soja",
+                "quantidade_necessaria": 468.0,
+                "unidade": "kg"
+            }
+        ]
+    }
+]
