@@ -13,9 +13,10 @@ class InsumoManager:
     def salvar_dados(self):
         """Salva os dados dos insumos no arquivo JSON."""
         with open(self.arquivo, 'w') as f:
-            insumos_serializados = [insumo.__dict__ for insumo in self.insumos]
+            # Convertendo a lista de objetos para um dicionário serializável
+            insumos_serializados = {insumo.nome: insumo.to_dict() for insumo in self.insumos}
             json.dump(insumos_serializados, f, indent=4)
-        print("Dados salvos com sucesso!")
+        print("📂 Dados salvos com sucesso!")
 
     def carregar_dados(self):
         """Carrega os dados dos insumos do arquivo JSON."""
@@ -23,9 +24,11 @@ class InsumoManager:
             with open(self.arquivo, 'r') as f:
                 insumos_serializados = json.load(f)
                 insumos = []
-                for insumo_data in insumos_serializados:
-                    # Aqui, recriaremos os objetos a partir dos dados salvos
-                    tipo = insumo_data.get("tipo_insumo", "insumo")
+
+                for nome, insumo_data in insumos_serializados.items():
+                    tipo = insumo_data.pop("tipo_insumo", "insumo")  # Remove tipo_insumo antes de passar os argumentos
+
+                    # Instancia os objetos de acordo com o tipo
                     if tipo == "fertilizante":
                         insumo = Fertilizante(**insumo_data)
                     elif tipo == "semente":
@@ -36,13 +39,19 @@ class InsumoManager:
                         insumo = Veneno(**insumo_data)
                     else:
                         insumo = Insumo(**insumo_data)
+
+                    # Adiciona o objeto instanciado à lista
                     insumos.append(insumo)
-                return insumos
+
+                return insumos  # Agora retorna uma lista de objetos, não dicionário
         except (FileNotFoundError, json.JSONDecodeError):
             return []
 
-    def create(self, nome, descricao, quantidade, unidade, preco_unitario, tipo_insumo="insumo", **kwargs):
-        """Cria um Insumo, Fertilizante, Semente, Adubo ou Veneno com base no tipo especificado."""
+
+
+
+    def create(self, nome, descricao, quantidade, unidade, tipo_insumo="insumo", **kwargs):
+        """Cria um novo insumo e salva no arquivo."""
         if tipo_insumo == "fertilizante":
             novo_insumo = Fertilizante(nome, descricao, quantidade, unidade, **kwargs)
         elif tipo_insumo == "semente":
@@ -54,16 +63,14 @@ class InsumoManager:
         else:
             novo_insumo = Insumo(nome, descricao, quantidade, unidade)
 
+        # Adiciona à lista de insumos e salva no JSON
         self.insumos.append(novo_insumo)
         self.salvar_dados()
-        print(f"{tipo_insumo.capitalize()} '{nome}' criado com sucesso!")
+        print(f"✅ {tipo_insumo.capitalize()} '{nome}' criado com sucesso!")
 
     def read(self, nome):
         """Retorna um insumo pelo nome."""
-        for insumo in self.insumos:
-            if insumo.nome == nome:
-                return insumo
-        return None
+        return next((insumo for insumo in self.insumos if insumo.nome == nome), None)
 
     def update(self, nome, **kwargs):
         """Atualiza um insumo existente."""
@@ -73,9 +80,9 @@ class InsumoManager:
                 if hasattr(insumo, key):
                     setattr(insumo, key, value)
             self.salvar_dados()
-            print(f"Insumo '{nome}' atualizado com sucesso!")
+            print(f"🔄 Insumo '{nome}' atualizado com sucesso!")
         else:
-            print(f"Insumo '{nome}' não encontrado.")
+            print(f"⚠ Insumo '{nome}' não encontrado.")
 
     def delete(self, nome):
         """Remove um insumo pelo nome."""
@@ -83,16 +90,15 @@ class InsumoManager:
         if insumo:
             self.insumos.remove(insumo)
             self.salvar_dados()
-            print(f"Insumo '{nome}' deletado com sucesso!")
+            print(f"🗑 Insumo '{nome}' deletado com sucesso!")
         else:
-            print(f"Insumo '{nome}' não encontrado.")
+            print(f"⚠ Insumo '{nome}' não encontrado.")
 
     def list_all(self):
         """Lista todos os insumos cadastrados."""
         if not self.insumos:
-            print("Nenhum insumo registrado.")
+            print("📭 Nenhum insumo registrado.")
         else:
             print("\n📋 Lista de Insumos Cadastrados:\n")
             for insumo in self.insumos:
                 print(insumo)
-                print(f"   💰 Valor Total: R${insumo.calcular_valor_total():.2f}\n")

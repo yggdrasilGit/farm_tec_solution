@@ -1,15 +1,17 @@
 class Insumo:
     def __init__(self, nome, descricao, quantidade, unidade):
-        self.nome = nome  # Nome do insumo
-        self.descricao = descricao  # Descrição do insumo
-        self.quantidade = quantidade  # Quantidade disponível
-        self.unidade = unidade  # Unidade de medida do insumo
+        self.nome = nome
+        self.descricao = descricao
+        self.quantidade = quantidade
+        self.unidade = unidade
+
+    def to_dict(self):
+        return {
+            "nome": self.nome,
+            "descricao": self.descricao,
+            "quantidade": self.quantidade,
+            "unidade": self.unidade
+        }
 
     def __str__(self):
-        # Método para representar o insumo de maneira legível
-        return "\n".join([
-            f"Insumo: {self.nome}",
-            f"Descrição: {self.descricao}",
-            f"Quantidade: {self.quantidade}", 
-            f"Unidade: {self.unidade}"
-        ])
+        return f"Nome: {self.nome}\nDescrição: {self.descricao}\nQuantidade: {self.quantidade}\nUnidade: {self.unidade}"

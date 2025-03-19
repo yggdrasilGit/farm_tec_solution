@@ -11,8 +11,9 @@ def limpar_tela():
 
 if __name__ == "__main__":
     # Instanciando o menu e testando as funcionalidades
+    
+    limpar_tela()
     menu = Menu()
     menu.menu_principal()
-    limpar_tela()
 
 

@@ -43,19 +43,22 @@ class InsumoMenu:
         tipos = {"1": "fertilizante", "2": "semente", "3": "adubo", "4": "veneno", "5": "insumo"}
         tipo_insumo = tipos.get(tipo_escolha, "insumo")
         
-        nome = tipo_insumo.capitalize
+        nome = tipo_insumo.capitalize()
         descricao = input("Descrição: ")
         quantidade = int(input("Quantidade: "))
         unidade = input("Unidade de medida por hectare: ")
-        preco_unitario = float(input("Preço unitário: "))
         
         kwargs = {}
         if tipo_insumo == "fertilizante":
             kwargs["composicao"] = input("Composição: ")
             kwargs["tipo"] = input("Tipo de fertilizante: ")
             kwargs["dosagem_recomendada"] = input("Dosagem recomendada: ")
+            kwargs["preco_unitario"] = float(input("Preço unitário: "))
         elif tipo_insumo == "semente":
             kwargs["germinacao"] = input("Taxa de germinação: ")
+            kwargs["tipo"] = input("Tipo: ")
+            kwargs["origem"] = input("Origem: ")
+            kwargs["validade"] = input("Validade: ")
         elif tipo_insumo == "adubo":
             kwargs["tipo"] = input("Tipo de adubo: ")
             kwargs["forma_aplicacao"] = input("Forma de aplicação: ")
@@ -64,8 +67,8 @@ class InsumoMenu:
             kwargs["tipo"] = input("Tipo de veneno: ")
             kwargs["toxicidade"] = input("Nível de toxicidade: ")
             kwargs["area_aplicacao"] = input("Área de aplicação: ")
-        
-        self.manager.create(nome, descricao, quantidade, unidade, preco_unitario, tipo_insumo, **kwargs)
+
+        self.manager.create(nome, descricao, quantidade, unidade, tipo_insumo, **kwargs)
     
     def atualizar_insumo(self):
         nome = input("Nome do insumo a ser atualizado: ")

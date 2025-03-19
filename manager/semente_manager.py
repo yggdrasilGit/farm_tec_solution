@@ -3,11 +3,12 @@ from manager.insumo_manage import Insumo
 
 
 class Semente(Insumo):
-    def __init__(self, nome, descricao, quantidade, unidade, tipo, origem, validade):
+    def __init__(self, nome, descricao, quantidade, unidade, tipo, origem, validade, germinacao):
         super().__init__(nome, descricao, quantidade, unidade)
         self.tipo = tipo
         self.origem = origem
         self.validade = validade
+        self.germinacao = germinacao
 
     def verificar_validade(self):
         return f"Semente {self.tipo} válida até: {self.validade}"
