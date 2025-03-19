@@ -47,9 +47,6 @@ class InsumoManager:
         except (FileNotFoundError, json.JSONDecodeError):
             return []
 
-
-
-
     def create(self, nome, descricao, quantidade, unidade, tipo_insumo="insumo", **kwargs):
         """Cria um novo insumo e salva no arquivo."""
         if tipo_insumo == "fertilizante":
@@ -102,3 +99,18 @@ class InsumoManager:
             print("\n📋 Lista de Insumos Cadastrados:\n")
             for insumo in self.insumos:
                 print(insumo)
+
+    # Função para buscar por nome
+    def buscar_produto(self, nome, tipo_insumo=None):
+        """Busca um insumo pelo nome e, opcionalmente, pelo tipo."""
+        resultados = []
+        for insumo in self.insumos:
+            if insumo.nome == nome:
+                # Se um tipo for especificado, verifica se o insumo corresponde ao tipo
+                if tipo_insumo:
+                    if isinstance(insumo, tipo_insumo):  # Verifique se insumo é uma instância de tipo_insumo
+                        resultados.append(insumo)
+                else:
+                    # Caso não seja especificado o tipo, adiciona qualquer insumo com o nome correspondente
+                    resultados.append(insumo)
+        return resultados

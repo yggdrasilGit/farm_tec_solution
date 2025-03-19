@@ -12,7 +12,8 @@ class InsumoMenu:
             print("2. Listar Insumos")
             print("3. Atualizar Insumo")
             print("4. Deletar Insumo")
-            print("5. Sair")
+            print("5. Buscar Insumo")
+            print("6. Sair")
             
             escolha = input("Escolha uma opção: ")
             
@@ -25,6 +26,8 @@ class InsumoMenu:
             elif escolha == "4":
                 self.deletar_insumo()
             elif escolha == "5":
+                self.buscar_insumo()
+            elif escolha == "6":
                 print("Saindo...")
                 break
             else:
@@ -85,3 +88,41 @@ class InsumoMenu:
     def deletar_insumo(self):
         nome = input("Nome do insumo a ser deletado: ")
         self.manager.delete(nome)
+
+    def buscar_insumo(self):
+        """Busca e exibe os insumos com base no nome e tipo."""
+        
+        # Solicitar o nome do insumo
+        nome = input("Digite o nome do insumo que deseja buscar: ")
+
+        # Solicitar o tipo de insumo (opcional)
+        print("\nEscolha o tipo de insumo:")
+        print("1. Fertilizante")
+        print("2. Semente")
+        print("3. Adubo")
+        print("4. Veneno")
+        print("5. Todos os tipos")
+        
+        tipo_escolha = input("Digite o número correspondente ao tipo (ou 5 para buscar todos os tipos): ")
+        
+        tipos = {
+            "1": 'Fertilizante',
+            "2": 'Semente',
+            "3": 'Adubo',
+            "4": 'Veneno',
+            "5": None  # Buscar todos os tipos
+        }
+        
+        tipo_insumo = tipos.get(tipo_escolha)
+        
+        # Realiza a busca
+        resultados = self.manager.buscar_produto(nome, tipo_insumo)
+        
+        # Exibe os resultados
+        if not resultados:
+            print(f"⚠ Nenhum insumo encontrado para o nome '{nome}' e tipo '{tipo_escolha}'!")
+        else:
+            print(f"🔍 Resultados encontrados para '{nome}':")
+            for idx, insumo in enumerate(resultados, 1):
+                print(f"{idx}. {insumo}")
+
