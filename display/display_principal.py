@@ -1,5 +1,7 @@
+from calculo.calcular_insumo import Plantio
 from display.display_cadastro_cultura import MenuCultura
 from display.display_area import MenuAreaPlantada
+from display.display_cultura import RelatorioAgricola
 from display.display_insumo import InsumoMenu
 
 class Menu:
@@ -13,6 +15,8 @@ class Menu:
             print("1. Tabalhar com Cultura")
             print("2. Tabalhar com Área de Plantio")
             print("3. Trabalhar com Insumo")
+            print("4. Calcular Cultura")
+            print("5. Relatorio Cultura")
             print("0. Sair")
             
             # Solicita ao usuário para escolher uma opção
@@ -24,6 +28,12 @@ class Menu:
                 MenuAreaPlantada().menu_area()
             elif opcao == '3':
                 InsumoMenu().exibir_menu()
+            elif opcao == '4':
+                plantio = Plantio("dados/areas_plantadas.json", "dados/insumos.json")
+                plantio.calcular()
+            elif opcao == '5':
+                relatorio = RelatorioAgricola("dados/resultado.json")
+                relatorio.exibir_resultados()
             elif opcao == '0':
                 print("\nSaindo\n")
                 break # Exibe as culturas cadastradas
