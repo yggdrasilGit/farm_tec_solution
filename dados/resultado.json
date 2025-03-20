@@ -58,5 +58,35 @@
                 "unidade": "kg"
             }
         ]
+    },
+    {
+        "cultura": "cana de açucar",
+        "area_plantada": 4900.0,
+        "insumos_utilizados": [
+            {
+                "insumo": "Fertilizante_7",
+                "descricao": "Orgânico",
+                "quantidade_necessaria": 14700.0,
+                "unidade": "kg"
+            },
+            {
+                "insumo": "Adubo_8",
+                "descricao": "Químico",
+                "quantidade_necessaria": 2450.0,
+                "unidade": "kg"
+            },
+            {
+                "insumo": "Veneno_8",
+                "descricao": "Inseticida",
+                "quantidade_necessaria": 4410.0,
+                "unidade": "litro"
+            },
+            {
+                "insumo": "Semente_6",
+                "descricao": "Cenoura",
+                "quantidade_necessaria": 343000.0,
+                "unidade": "kg"
+            }
+        ]
     }
 ]
