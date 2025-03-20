@@ -7,13 +7,13 @@ class Cultura:
 
     def salvar_dados(self):
         # Salva os dados no arquivo JSON
-        with open("dados/culturas.json", "w") as file:
-            json.dump(self._coluna_de_culturas, file)
+        with open("dados/culturas.json", "w", encoding="utf-8") as file:
+            json.dump(self._coluna_de_culturas, file, ensure_ascii=False, indent=4)
     
     def carregar_dados(self):
         # Carrega os dados do arquivo JSON, se existir
         try:
-            with open("dados/culturas.json", "r") as file:
+            with open("dados/culturas.json", "r", encoding="utf-8") as file:
                 return json.load(file)
         except FileNotFoundError:
             return []  # Retorna uma lista vazia caso o arquivo não exista
