@@ -79,56 +79,55 @@ class AreaPlantada:
         self.salvar_dados()  # Salva os dados após adicionar
         print(f"Área '{nome_area}' com tamanho {tamanho_area} hectares adicionada!")
 
-    
-    def atualizar_area(self):
+        
+    def atualizar_area(self, area_antiga=None, novo_nome=None, novo_tamanho=None):
         """
-        Permite ao usuário atualizar uma área plantada existente.
+        Atualiza uma área plantada existente.
+        Se os parâmetros não forem fornecidos, solicita entrada do usuário.
         """
-        while True:
-            print("Áreas plantadas atuais:", self.areas_plantadas)
-            area_antiga = input("Digite o nome da área que deseja atualizar (ou digite 'sair' para finalizar): ")
-            if area_antiga.lower() == 'sair':
-                print("Atualização de áreas plantadas finalizada.")
-                break  # Sai do loop se o usuário digitar 'sair'
-            # Verifica se a área existe na lista
-            area_encontrada = next((area for area in self.areas_plantadas if area['nome'] == area_antiga), None)
-            if not area_encontrada:
-                print(f"A área '{area_antiga}' não existe na lista.")
-                continue  # Continua a pedir se a área não estiver na lista
+        if area_antiga is None:
+            area_antiga = input("Digite o nome da área que deseja atualizar: ")
+        
+        area_encontrada = next((area for area in self.areas_plantadas if area['nome'] == area_antiga), None)
+        if not area_encontrada:
+            print(f"A área '{area_antiga}' não existe na lista.")
+            return
+
+        if novo_nome is None:
             novo_nome = input(f"Digite o novo nome para a área '{area_antiga}': ")
-            novo_tamanho = input(f"Digite o novo tamanho da área '{novo_nome}' em hectares: ")
+        
+        if novo_tamanho is None:
             try:
-                novo_tamanho = float(novo_tamanho)  # Converte o tamanho para número
+                novo_tamanho = float(input(f"Digite o novo tamanho da área '{novo_nome}': "))
                 if novo_tamanho <= 0:
                     print("O tamanho da área deve ser maior que zero.")
-                    continue  # Recomeça o loop caso o tamanho seja inválido
+                    return
             except ValueError:
                 print("Por favor, insira um número válido para o tamanho da área.")
-                continue  # Recomeça o loop caso o tamanho não seja válido
-            # Atualiza a área na lista
-            indice = self.areas_plantadas.index(area_encontrada)
-            self.areas_plantadas[indice] = {'nome': novo_nome, 'tamanho': novo_tamanho}
-            self.salvar_dados()  # Salva os dados após atualizar
-            print(f"A área '{area_antiga}' foi atualizada para '{novo_nome}' com {novo_tamanho} hectares.")
-    
-    def remover_area(self):
+                return
+
+        indice = self.areas_plantadas.index(area_encontrada)
+        self.areas_plantadas[indice] = {'nome': novo_nome, 'tamanho': novo_tamanho}
+        self.salvar_dados()
+        print(f"A área '{area_antiga}' foi atualizada para '{novo_nome}' com {novo_tamanho} hectares.")
+
+    def remover_area(self, area_a_remover=None):
         """
-        Permite ao usuário remover uma área plantada existente.
+        Remove uma área plantada existente.
+        Se o nome não for fornecido, solicita entrada do usuário.
         """
-        while True:
-            print("Áreas plantadas atuais:", self.areas_plantadas)
-            area_a_remover = input("Digite o nome da área que deseja remover (ou digite 'sair' para finalizar): ")
-            if area_a_remover.lower() == 'sair':
-                print("Remoção de áreas plantadas finalizada.")
-                break  # Sai do loop se o usuário digitar 'sair'
-            # Verifica se a área existe na lista
-            area_encontrada = next((area for area in self.areas_plantadas if area['nome'] == area_a_remover), None)
-            if not area_encontrada:
-                print(f"A área '{area_a_remover}' não existe na lista.")
-                continue  # Continua a pedir se a área não estiver na lista
-            self.areas_plantadas.remove(area_encontrada)  # Remove a área da lista
-            self.salvar_dados()  # Salva os dados após remover
-            print(f"A área '{area_a_remover}' foi removida.")
+        if area_a_remover is None:
+            area_a_remover = input("Digite o nome da área que deseja remover: ")
+
+        area_encontrada = next((area for area in self.areas_plantadas if area['nome'] == area_a_remover), None)
+        if not area_encontrada:
+            print(f"A área '{area_a_remover}' não existe na lista.")
+            return
+
+        self.areas_plantadas.remove(area_encontrada)
+        self.salvar_dados()
+        print(f"A área '{area_a_remover}' foi removida.")
+
     
     def mostrar_areas(self):
         """

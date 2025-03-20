@@ -1,3 +1,4 @@
+import unittest
 from display.display_principal import Menu
 
 import os
@@ -10,8 +11,6 @@ def limpar_tela():
         os.system('clear')
 
 if __name__ == "__main__":
-    # Instanciando o menu e testando as funcionalidades
-    
     limpar_tela()
     menu = Menu()
     menu.menu_principal()
