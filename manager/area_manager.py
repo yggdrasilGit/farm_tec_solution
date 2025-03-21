@@ -86,19 +86,19 @@ class AreaPlantada:
         Se os parâmetros não forem fornecidos, solicita entrada do usuário.
         """
         if area_antiga is None:
-            area_antiga = input("Digite o nome da área que deseja atualizar: ")
+            area_antiga = input("Digite o nome da área que deseja atualizar: ").strip().lower()
         
         area_encontrada = next((area for area in self.areas_plantadas if area['nome'] == area_antiga), None)
         if not area_encontrada:
-            print(f"A área '{area_antiga}' não existe na lista.")
+            print(f"A área '{area_antiga.title()}' não existe na lista.")
             return
 
         if novo_nome is None:
-            novo_nome = input(f"Digite o novo nome para a área '{area_antiga}': ")
+            novo_nome = input(f"Digite o novo nome para a área '{area_antiga.title()}': ").strip().lower()
         
         if novo_tamanho is None:
             try:
-                novo_tamanho = float(input(f"Digite o novo tamanho da área '{novo_nome}': "))
+                novo_tamanho = float(input(f"Digite o novo tamanho da área '{novo_nome.title()}': "))
                 if novo_tamanho <= 0:
                     print("O tamanho da área deve ser maior que zero.")
                     return
@@ -109,7 +109,9 @@ class AreaPlantada:
         indice = self.areas_plantadas.index(area_encontrada)
         self.areas_plantadas[indice] = {'nome': novo_nome, 'tamanho': novo_tamanho}
         self.salvar_dados()
-        print(f"A área '{area_antiga}' foi atualizada para '{novo_nome}' com {novo_tamanho} hectares.")
+        
+        print(f"A área '{area_antiga.title()}' foi atualizada para '{novo_nome.title()}' com {novo_tamanho} hectares.")
+
 
     def remover_area(self, area_a_remover=None):
         """

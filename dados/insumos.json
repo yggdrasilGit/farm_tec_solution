@@ -1,292 +1,37 @@
 {
-    "Fertilizante_1": {
-        "nome": "Fertilizante",
-        "descricao": "Orgânico",
-        "quantidade": 10,
-        "unidade": "kg",
-        "preco_unitario": 35.0,
-        "tipo": "NPK",
-        "composicao": "Nitrogênio, Fósforo, Potássio",
-        "dosagem_recomendada": "200g/m²",
-        "tipo_insumo": "fertilizante"
-    },
-    "Fertilizante_2": {
-        "nome": "Fertilizante",
-        "descricao": "Fósforo",
-        "quantidade": 15,
-        "unidade": "kg",
-        "preco_unitario": 25.0,
-        "tipo": "Fósforo",
-        "composicao": "Fósforo, Potássio",
-        "dosagem_recomendada": "150g/m²",
-        "tipo_insumo": "fertilizante"
-    },
-    "Fertilizante_3": {
-        "nome": "Fertilizante",
-        "descricao": "Nitrogênio",
-        "quantidade": 20,
-        "unidade": "kg",
-        "preco_unitario": 20.0,
-        "tipo": "Nitrogênio",
-        "composicao": "Nitrogênio, Potássio",
-        "dosagem_recomendada": "250g/m²",
-        "tipo_insumo": "fertilizante"
-    },
-    "Fertilizante_4": {
-        "nome": "Fertilizante",
-        "descricao": "Orgânico",
-        "quantidade": 12,
-        "unidade": "kg",
-        "preco_unitario": 32.0,
-        "tipo": "NPK",
-        "composicao": "Nitrogênio, Fósforo, Potássio",
-        "dosagem_recomendada": "200g/m²",
-        "tipo_insumo": "fertilizante"
-    },
-    "Fertilizante_5": {
-        "nome": "Fertilizante",
-        "descricao": "Fósforo",
-        "quantidade": 18,
-        "unidade": "kg",
-        "preco_unitario": 27.0,
-        "tipo": "Fósforo",
-        "composicao": "Fósforo, Potássio",
-        "dosagem_recomendada": "150g/m²",
-        "tipo_insumo": "fertilizante"
-    },
-    "Fertilizante_6": {
-        "nome": "Fertilizante",
-        "descricao": "Nitrogênio",
-        "quantidade": 22,
-        "unidade": "kg",
-        "preco_unitario": 18.0,
-        "tipo": "Nitrogênio",
-        "composicao": "Nitrogênio, Potássio",
-        "dosagem_recomendada": "250g/m²",
-        "tipo_insumo": "fertilizante"
-    },
-    "Fertilizante_7": {
-        "nome": "Fertilizante",
-        "descricao": "Orgânico",
-        "quantidade": 14,
-        "unidade": "kg",
-        "preco_unitario": 34.0,
-        "tipo": "NPK",
-        "composicao": "Nitrogênio, Fósforo, Potássio",
-        "dosagem_recomendada": "200g/m²",
-        "tipo_insumo": "fertilizante"
-    },
-    "Fertilizante_8": {
-        "nome": "Fertilizante",
-        "descricao": "Fósforo",
-        "quantidade": 19,
-        "unidade": "kg",
-        "preco_unitario": 29.0,
-        "tipo": "Fósforo",
-        "composicao": "Fósforo, Potássio",
-        "dosagem_recomendada": "150g/m²",
-        "tipo_insumo": "fertilizante"
-    },
-    "Fertilizante_9": {
-        "nome": "Fertilizante",
-        "descricao": "Nitrogênio",
-        "quantidade": 30,
-        "unidade": "kg",
-        "preco_unitario": 17.0,
-        "tipo": "Nitrogênio",
-        "composicao": "Nitrogênio, Potássio",
-        "dosagem_recomendada": "250g/m²",
-        "tipo_insumo": "fertilizante"
-    },
-    "Fertilizante_10": {
-        "nome": "Fertilizante",
-        "descricao": "Orgânico",
-        "quantidade": 16,
-        "unidade": "kg",
-        "preco_unitario": 33.0,
-        "tipo": "NPK",
-        "composicao": "Nitrogênio, Fósforo, Potássio",
-        "dosagem_recomendada": "200g/m²",
-        "tipo_insumo": "fertilizante"
-    },
-    "Semente_1": {
+    "Semente": {
         "nome": "Semente",
-        "descricao": "Milho",
-        "quantidade": 50,
-        "unidade": "kg"
-    },
-    "Semente_2": {
-        "nome": "Semente",
-        "descricao": "Feijão",
-        "quantidade": 40,
-        "unidade": "kg"
-    },
-    "Semente_3": {
-        "nome": "Semente",
-        "descricao": "Soja",
+        "descricao": "Ab\u00e3\u00b3Bora",
         "quantidade": 60,
         "unidade": "kg"
     },
-    "Semente_4": {
-        "nome": "Semente",
-        "descricao": "Arroz",
-        "quantidade": 55,
-        "unidade": "kg"
-    },
-    "Semente_5": {
-        "nome": "Semente",
-        "descricao": "Tomate",
-        "quantidade": 45,
-        "unidade": "kg"
-    },
-    "Semente_6": {
-        "nome": "Semente",
-        "descricao": "Cenoura",
-        "quantidade": 30,
-        "unidade": "kg"
-    },
-    "Semente_7": {
-        "nome": "Semente",
-        "descricao": "Alface",
-        "quantidade": 50,
-        "unidade": "kg"
-    },
-    "Semente_8": {
-        "nome": "Semente",
-        "descricao": "Pepino",
-        "quantidade": 40,
-        "unidade": "kg"
-    },
-    "Semente_9": {
-        "nome": "Semente",
-        "descricao": "Beterraba",
-        "quantidade": 35,
-        "unidade": "kg"
-    },
-    "Semente_10": {
-        "nome": "Semente",
-        "descricao": "Abóbora",
-        "quantidade": 60,
-        "unidade": "kg"
-    },
-    "Adubo_1": {
+    "Adubo": {
         "nome": "Adubo",
-        "descricao": "Químico",
-        "quantidade": 20,
-        "unidade": "kg"
-    },
-    "Adubo_2": {
-        "nome": "Adubo",
-        "descricao": "Orgânico",
-        "quantidade": 25,
-        "unidade": "kg"
-    },
-    "Adubo_3": {
-        "nome": "Adubo",
-        "descricao": "Orgânico",
-        "quantidade": 30,
-        "unidade": "kg"
-    },
-    "Adubo_4": {
-        "nome": "Adubo",
-        "descricao": "Químico",
-        "quantidade": 22,
-        "unidade": "kg"
-    },
-    "Adubo_5": {
-        "nome": "Adubo",
-        "descricao": "Químico",
-        "quantidade": 18,
-        "unidade": "kg"
-    },
-    "Adubo_6": {
-        "nome": "Adubo",
-        "descricao": "Orgânico",
-        "quantidade": 20,
-        "unidade": "kg"
-    },
-    "Adubo_7": {
-        "nome": "Adubo",
-        "descricao": "Orgânico",
-        "quantidade": 27,
-        "unidade": "kg"
-    },
-    "Adubo_8": {
-        "nome": "Adubo",
-        "descricao": "Químico",
-        "quantidade": 25,
-        "unidade": "kg"
-    },
-    "Adubo_9": {
-        "nome": "Adubo",
-        "descricao": "Orgânico",
-        "quantidade": 30,
-        "unidade": "kg"
-    },
-    "Adubo_10": {
-        "nome": "Adubo",
-        "descricao": "Químico",
+        "descricao": "Qu\u00e3\u00adMico",
         "quantidade": 24,
         "unidade": "kg"
     },
-    "Veneno_1": {
-        "nome": "Veneno",
-        "descricao": "Fungicida",
-        "quantidade": 5,
-        "unidade": "litro"
-    },
-    "Veneno_2": {
-        "nome": "Veneno",
-        "descricao": "Inseticida",
-        "quantidade": 10,
-        "unidade": "litro"
-    },
-    "Veneno_3": {
-        "nome": "Veneno",
-        "descricao": "Herbicida",
-        "quantidade": 8,
-        "unidade": "litro"
-    },
-    "Veneno_4": {
-        "nome": "Veneno",
-        "descricao": "Fungicida",
-        "quantidade": 7,
-        "unidade": "litro"
-    },
-    "Veneno_5": {
-        "nome": "Veneno",
-        "descricao": "Inseticida",
-        "quantidade": 6,
-        "unidade": "litro"
-    },
-    "Veneno_6": {
-        "nome": "Veneno",
-        "descricao": "Herbicida",
-        "quantidade": 5,
-        "unidade": "litro"
-    },
-    "Veneno_7": {
-        "nome": "Veneno",
-        "descricao": "Fungicida",
-        "quantidade": 9,
-        "unidade": "litro"
-    },
-    "Veneno_8": {
-        "nome": "Veneno",
-        "descricao": "Inseticida",
-        "quantidade": 12,
-        "unidade": "litro"
-    },
-    "Veneno_9": {
-        "nome": "Veneno",
-        "descricao": "Herbicida",
-        "quantidade": 10,
-        "unidade": "litro"
-    },
-    "Veneno_10": {
+    "Veneno": {
         "nome": "Veneno",
         "descricao": "Fungicida",
         "quantidade": 8,
         "unidade": "litro"
+    },
+    "fertilizante": {
+        "nome": "fertilizante",
+        "descricao": "Fertilizate Teste",
+        "quantidade": 20,
+        "unidade": "100",
+        "preco_unitario": 1000.0,
+        "tipo": "b",
+        "composicao": "agua",
+        "dosagem_recomendada": "20",
+        "tipo_insumo": "fertilizante"
+    },
+    "adubo": {
+        "nome": "adubo",
+        "descricao": "adubo teste",
+        "quantidade": 20,
+        "unidade": "kg"
     }
 }

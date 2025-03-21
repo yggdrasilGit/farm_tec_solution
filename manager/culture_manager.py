@@ -20,12 +20,16 @@ class Cultura:
 
     def adicionar_cultura(self):
         while True:
-            nova_cultura = input("Cadastre a nova cultura (ou 'sair' para voltar): ")
+            nova_cultura = input("Cadastre a nova cultura (ou 'sair' para voltar): ").strip().lower()
             if nova_cultura.lower() == 'sair':
                 break
-            self._coluna_de_culturas.append(nova_cultura)
-            self.salvar_dados()  # Salva os dados após adicionar a cultura
-            print(f"Cultura '{nova_cultura}' adicionada!")
+            
+            if nova_cultura in self._coluna_de_culturas:
+                print("⚠️ Esta cultura já foi cadastrada!")
+            else:
+                self._coluna_de_culturas.append(nova_cultura)
+                self.salvar_dados()  # Salva os dados após adicionar a cultura
+                print(f"Cultura '{nova_cultura}' adicionada!")
 
     def atualizar_cultura(self):
         while True:
@@ -33,25 +37,25 @@ class Cultura:
                 print("Não há culturas cadastradas ainda.")
                 break
             print("Culturas atuais:", self._coluna_de_culturas)
-            cultura_antiga = input("Digite a cultura que deseja atualizar (ou 'sair' para voltar): ")
+            cultura_antiga = input("Digite a cultura que deseja atualizar (ou 'sair' para voltar): ").strip().lower()
             if cultura_antiga.lower() == 'sair':
                 break
             if cultura_antiga not in self._coluna_de_culturas:
                 print(f"A cultura '{cultura_antiga}' não existe na lista.")
                 continue
-            nova_cultura = input(f"Digite o novo nome para a cultura '{cultura_antiga}': ")
+            nova_cultura = input(f"Digite o novo nome para a cultura '{cultura_antiga.title()}': ").strip().lower()
             indice = self._coluna_de_culturas.index(cultura_antiga)
             self._coluna_de_culturas[indice] = nova_cultura
             self.salvar_dados()  # Salva os dados após atualizar a cultura
-            print(f"Cultura '{cultura_antiga}' atualizada para '{nova_cultura}'.")
+            print(f"Cultura '{cultura_antiga.title()}' atualizada para '{nova_cultura.title()}'.")
 
     def remover_cultura(self):
         while True:
             if not self._coluna_de_culturas:
                 print("Não há culturas cadastradas ainda.")
                 break
-            print("Culturas atuais:", self._coluna_de_culturas)
-            cultura_a_remover = input("Digite a cultura que deseja remover (ou 'sair' para voltar): ")
+            print(f"Culturas atuais:\n• {'\n• '.join(self._coluna_de_culturas)}")
+            cultura_a_remover = input("Digite a cultura que deseja remover (ou 'sair' para voltar): ").strip().lower()
             if cultura_a_remover.lower() == 'sair':
                 break
             if cultura_a_remover not in self._coluna_de_culturas:
@@ -64,7 +68,7 @@ class Cultura:
     def mostrar_culturas(self):
         # Exibe as culturas cadastradas
         if self._coluna_de_culturas:
-            print(f"{self._tipo_de_cultura}: {', '.join(self._coluna_de_culturas)}")
+            print(f"{self._tipo_de_cultura}:\n• {'\n• '.join(self._coluna_de_culturas).title()}")
         else:
             print("Nenhuma cultura cadastrada.")
 
