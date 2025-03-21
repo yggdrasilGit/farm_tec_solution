@@ -26,9 +26,18 @@ class InsumoManager:
                 insumos = []
 
                 for nome, insumo_data in insumos_serializados.items():
-                    tipo = insumo_data.pop("tipo_insumo", "insumo")  # Remove tipo_insumo antes de passar os argumentos
+                    tipo = insumo_data.get("tipo_insumo", "insumo")  # Obtém o tipo original
 
-                    # Instancia os objetos de acordo com o tipo
+                    # Formatação apenas para exibição (não altera os dados do JSON)
+                    tipo_formatado = tipo.title()
+                    descricao_formatada = insumo_data.get("descricao", "").title()
+
+                    # Criar uma cópia para evitar alterar o JSON original em memória
+                    insumo_data = insumo_data.copy()
+                    insumo_data.pop("tipo_insumo", None)  
+                    insumo_data["descricao"] = descricao_formatada 
+
+                    # Instancia os objetos de acordo com o tipo original
                     if tipo == "fertilizante":
                         insumo = Fertilizante(**insumo_data)
                     elif tipo == "semente":
@@ -40,15 +49,17 @@ class InsumoManager:
                     else:
                         insumo = Insumo(**insumo_data)
 
-                    # Adiciona o objeto instanciado à lista
                     insumos.append(insumo)
 
-                return insumos  # Agora retorna uma lista de objetos, não dicionário
+                return insumos  # Retorna a lista de objetos
         except (FileNotFoundError, json.JSONDecodeError):
             return []
 
+
     def create(self, nome, descricao, quantidade, unidade, tipo_insumo="insumo", **kwargs):
         """Cria um novo insumo e salva no arquivo."""
+        nome = nome.lower()
+
         if tipo_insumo == "fertilizante":
             novo_insumo = Fertilizante(nome, descricao, quantidade, unidade, **kwargs)
         elif tipo_insumo == "semente":
@@ -83,6 +94,7 @@ class InsumoManager:
 
     def delete(self, nome):
         """Remove um insumo pelo nome."""
+        nome = nome.lower()
         insumo = self.read(nome)
         if insumo:
             self.insumos.remove(insumo)
@@ -98,14 +110,16 @@ class InsumoManager:
         else:
             print("\n📋 Lista de Insumos Cadastrados:\n")
             for insumo in self.insumos:
+                insumo.nome = insumo.nome.title()
                 print(insumo)
+                print()
 
     # Função para buscar por nome
     def buscar_produto(self, nome, tipo_insumo=None):
         """Busca um insumo pelo nome e, opcionalmente, pelo tipo."""
         resultados = []
         for insumo in self.insumos:
-            if insumo.nome == nome:
+            if insumo.nome.strip().lower() == nome.strip().lower():
                 # Se um tipo for especificado, verifica se o insumo corresponde ao tipo
                 if tipo_insumo:
                     if isinstance(insumo, tipo_insumo):  # Verifique se insumo é uma instância de tipo_insumo

@@ -19,7 +19,7 @@ class CalculadoraAreaCultura:
         
         print("\nCulturas disponíveis:")
         for i, cult in enumerate(self.cultura._coluna_de_culturas, start=1):
-            print(f"{i}. {cult}")
+            print(f"{i}. {cult.title()}")
         
         escolha = input("Selecione a cultura pelo número: ")
         try:

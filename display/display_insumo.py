@@ -13,7 +13,7 @@ class InsumoMenu:
             print("3. Atualizar Insumo")
             print("4. Deletar Insumo")
             print("5. Buscar Insumo")
-            print("6. Sair")
+            print("0. Sair")
             
             escolha = input("Escolha uma opção: ")
             
@@ -27,7 +27,7 @@ class InsumoMenu:
                 self.deletar_insumo()
             elif escolha == "5":
                 self.buscar_insumo()
-            elif escolha == "6":
+            elif escolha == "0":
                 print("Saindo...")
                 break
             else:

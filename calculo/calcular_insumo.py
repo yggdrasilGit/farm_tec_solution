@@ -96,11 +96,19 @@ class Plantio:
         print("\nCálculo concluído! Os dados foram adicionados ao arquivo 'resultado.json'.")
 
     def calcular(self):
-        # Exibir e escolher a cultura
+
+        if not self.areas_plantadas:  # Verifica se a lista de áreas plantadas está vazia
+            print("\n⚠️ Nenhuma área de plantio cadastrada! Cadastre uma área antes de calcular.")
+            return  # Retorna ao menu anterior
+
         self.exibir_culturas()
         cultura_escolhida, area_plantada = self.escolher_cultura()
 
-        # Escolher insumos
+        if cultura_escolhida.lower() == 'sair':
+            print("Retornando ao menu principal...")
+            return
+
+
         fertilizantes = self.escolher_insumos("Fertilizante")
         adubos = self.escolher_insumos("Adubo")
         venenos = self.escolher_insumos("Veneno")
@@ -110,22 +118,18 @@ class Plantio:
             print("\nVocê deve escolher pelo menos uma semente para plantar.")
             return
 
-        # Pedir as quantidades para cada insumo
         quantidade_fertilizantes = self.definir_quantidade(fertilizantes, "Fertilizante")
         quantidade_adubos = self.definir_quantidade(adubos, "Adubo")
         quantidade_venenos = self.definir_quantidade(venenos, "Veneno")
         quantidade_sementes = self.definir_quantidade(sementes, "Semente")
 
-        # Calcular quantidade total para a área plantada
         resultado = {"cultura": cultura_escolhida, "area_plantada": area_plantada, "insumos_utilizados": []}
-        
-        # Adicionar os insumos ao resultado
+
         self.adicionar_insumos(fertilizantes, quantidade_fertilizantes, area_plantada, resultado)
         self.adicionar_insumos(adubos, quantidade_adubos, area_plantada, resultado)
         self.adicionar_insumos(venenos, quantidade_venenos, area_plantada, resultado)
         self.adicionar_insumos(sementes, quantidade_sementes, area_plantada, resultado)
 
-        # Salvar o resultado no arquivo
         self.salvar_resultado(resultado)
 
 # Criar uma instância da classe e rodar o cálculo
