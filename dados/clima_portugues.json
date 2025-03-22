@@ -1,0 +1,23 @@
+[
+  {
+    "Cidade": "Paraúna",
+    "Pais": "BR",
+    "Latitude": -16.9496,
+    "Longitude": -50.4473,
+    "Temperatura": 20.06,
+    "Sensacao_Termica": 20.42,
+    "Temp_Minima": 20.06,
+    "Temp_Maxima": 20.06,
+    "Pressao_Atmosferica": 1016,
+    "Umidade": 88,
+    "Visibilidade": 10000,
+    "Velocidade_do_Vento": 1.32,
+    "Direcao_do_Vento": 39,
+    "Cobertura_de_Nuvens": 17,
+    "Descricao_do_Clima": "algumas nuvens",
+    "Tipo_de_Clima": "Clouds",
+    "Nascer_do_Sol": "2025-03-22 09:26:01",
+    "Por_do_Sol": "2025-03-22 21:31:07",
+    "Fuso_Horario": -10800
+  }
+]

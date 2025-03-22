@@ -1,8 +1,13 @@
+from api_input_data.load_api_metereologica import RClimateDataLoader
+from api_input_data.load_data_meteriologist import MeteorologistDataLoader
+from api_input_data.loard_api_geolocalizacao import RGeolocationLoader
 from calculo.calcular_insumo import Plantio
 from display.display_cadastro_cultura import MenuCultura
 from display.display_area import MenuAreaPlantada
 from display.display_cultura import RelatorioAgricola
 from display.display_insumo import InsumoMenu
+from display.display_meteriologica import Cidade
+from display.display_stats import MeteorologistApp
 
 class Menu:
     def __init__(self):
@@ -17,6 +22,7 @@ class Menu:
             print("3. Trabalhar com Insumo")
             print("4. Calcular Cultura")
             print("5. Relatorio Cultura")
+            print("6. Relatorio Cultura")
             print("0. Sair")
             
             # Solicita ao usuário para escolher uma opção
@@ -34,6 +40,21 @@ class Menu:
             elif opcao == '5':
                 relatorio = RelatorioAgricola("dados/resultado.json")
                 relatorio.exibir_resultados()
+            elif opcao == '6':
+                nome_cidade = input("Digite o nome da cidade: ")
+                cidade = Cidade(nome_cidade)
+                print(cidade.mostrar_cidade())
+                print(cidade.buscar_informacoes())
+                caminho_arquivo = cidade.salvar_em_json()
+                print(f"Informações salvas em {caminho_arquivo}")
+                geo_loader = RGeolocationLoader()
+                geo_loader.executar_geolocalizacao()
+                loader = RClimateDataLoader()
+                loader.executar_script()
+                nome_arquivo = "clima_portugues.json"  # Nome do arquivo JSON
+                loader = MeteorologistDataLoader(nome_arquivo)
+                dados_clima = loader.carregar_arquivo_json()
+
             elif opcao == '0':
                 print("\nSaindo\n")
                 break # Exibe as culturas cadastradas
