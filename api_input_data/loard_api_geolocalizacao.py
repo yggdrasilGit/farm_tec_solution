@@ -14,7 +14,7 @@ class RGeolocationLoader:
         """
         Inicializa a classe com o nome do script R.
 
-        :param nome_script: Nome do script R a ser executado.
+        :param nome_script: Nome do script R a ser executado. O valor padrão é 'script_geolocalizacao.R'.
         """
         self.script_path = self.encontrar_arquivo(nome_script)
         self.json_path = None
@@ -49,9 +49,10 @@ class RGeolocationLoader:
             return False
 
         try:
-            robjects.r.source(str(self.script_path))
+            robjects.r.source(str(self.script_path))  # Executa o script R
+            # Após execução, procura o arquivo JSON gerado
             self.json_path = self.encontrar_arquivo("latitude_longitude.json")
-            return bool(self.json_path)
+            return bool(self.json_path)  # Retorna True se o arquivo foi encontrado
         except Exception as e:
             print(f"❌ Erro ao executar o script R: {e}")
             return False
@@ -68,8 +69,9 @@ class RGeolocationLoader:
 
         try:
             with self.json_path.open('r', encoding='utf-8') as arquivo:
-                dados = json.load(arquivo)
+                dados = json.load(arquivo)  # Carrega os dados JSON
 
+            # Prepara os dados para exibição
             tabela = [
                 [d["location"], d["lat"], d["long"]]
                 for d in dados
@@ -80,7 +82,7 @@ class RGeolocationLoader:
             print("\n")
             return dados
         except Exception as e:
-            print(f"❌ Erro ao carregar JSON: {e}")
+            print(f"❌ Erro ao carregar o arquivo JSON: {e}")
             return None
 
     def executar_geolocalizacao(self):
@@ -96,6 +98,7 @@ class RGeolocationLoader:
         return None
 
 
+# Exemplo de como usar a classe
 # if __name__ == "__main__":
 #    geo_loader = RGeolocationLoader()
 #    geo_loader.executar_geolocalizacao()

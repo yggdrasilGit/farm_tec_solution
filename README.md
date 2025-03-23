@@ -1,21 +1,38 @@
-# Nome do Projeto
+# Farm Tech Soluiton
 
 ## 📌 Descrição  
-Breve descrição do projeto. Explique o que ele faz e por que foi criado.
+Este programa faz operacoes de CRUD, de área de plantio, insumos, area plantadas e tambem calcula 
+a quantidade de area plantada de acordo com a figura geometrica quadrado, retangulo ou triângulo 
+alem disso oferece relatorios das culturas e o insumo que ira utilizar por area a media e o desvio
+padrao geral das areas plantadas e insumos, alem de fornecer dados climaticos
 
 ## 🐜 Tecnologias Utilizadas  
-- Python 3.x  
-- Frameworks/Bibliotecas (se houver)  
-- Outros recursos (ex.: banco de dados, APIs)  
+- Python 3.12 
+- cffi==1.17.1
+- Jinja2==3.1.6
+- MarkupSafe==3.0.2
+- orjson==3.10.15
+- pycparser==2.22
+- pyfiglet==1.0.2
+- rpy2==3.5.17
+- tabulate==0.9.0
+- tzlocal==5.3.1
+- APIs == "https://api.openweathermap.org/data/2.5/weather?
+- R 
+- jsonlite
+- fs
+- here
+- httr
+- tibble
 
 ## 🛠 Instalação  
 1. Clone o repositório:
    ```bash
-   git clone https://github.com/seu-usuario/nome-do-repositorio.git
+   git clone https://github.com/yggdrasilGit/farm_tec_solution.git
    ```
 2. Acesse o diretório do projeto:
    ```bash
-   cd nome-do-repositorio
+   cd farm_tec_solution
    ```
 3. Crie um ambiente virtual e ative-o:
    ```bash

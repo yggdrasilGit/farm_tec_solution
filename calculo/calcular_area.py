@@ -21,16 +21,16 @@ class CalculadoraAreaCultura:
         for i, cult in enumerate(self.cultura._coluna_de_culturas, start=1):
             print(f"{i}. {cult.title()}")
         
-        escolha = input("Selecione a cultura pelo número: ")
-        try:
-            idx = int(escolha) - 1
-            if idx < 0 or idx >= len(self.cultura._coluna_de_culturas):
-                print("Opção inválida!")
-                return None
-            return self.cultura._coluna_de_culturas[idx]
-        except ValueError:
-            print("Entrada inválida! Digite um número.")
-            return None
+        while True:
+            escolha = input("Selecione a cultura pelo número: ")
+            try:
+                idx = int(escolha) - 1
+                if idx < 0 or idx >= len(self.cultura._coluna_de_culturas):
+                    print("Opção inválida! Tente novamente.")
+                else:
+                    return self.cultura._coluna_de_culturas[idx]
+            except ValueError:
+                print("Entrada inválida! Digite um número válido.")
 
     def calcular_area(self):
         """
@@ -43,35 +43,32 @@ class CalculadoraAreaCultura:
         print("2. Círculo")
         print("3. Quadrado")
         
-        opcao = input("Opção: ")
-        if opcao == '1':
-            try:
-                largura = float(input("Digite a largura (m): "))
-                comprimento = float(input("Digite o comprimento (m): "))
-                area = largura * comprimento
-                return area
-            except ValueError:
-                print("Entrada inválida para retângulo.")
-                return None
-        elif opcao == '2':
-            try:
-                raio = float(input("Digite o raio (m): "))
-                area = math.pi * (raio ** 2)
-                return area
-            except ValueError:
-                print("Entrada inválida para círculo.")
-                return None
-        elif opcao == '3':
-            try:
-                lado = float(input("Digite o lado (m): "))
-                area = lado ** 2
-                return area
-            except ValueError:
-                print("Entrada inválida para quadrado.")
-                return None
-        else:
-            print("Opção inválida!")
-            return None
+        while True:
+            opcao = input("Opção: ")
+            if opcao == '1':
+                try:
+                    largura = float(input("Digite a largura (m): "))
+                    comprimento = float(input("Digite o comprimento (m): "))
+                    area = largura * comprimento
+                    return area
+                except ValueError:
+                    print("Entrada inválida para retângulo. Tente novamente.")
+            elif opcao == '2':
+                try:
+                    raio = float(input("Digite o raio (m): "))
+                    area = math.pi * (raio ** 2)
+                    return area
+                except ValueError:
+                    print("Entrada inválida para círculo. Tente novamente.")
+            elif opcao == '3':
+                try:
+                    lado = float(input("Digite o lado (m): "))
+                    area = lado ** 2
+                    return area
+                except ValueError:
+                    print("Entrada inválida para quadrado. Tente novamente.")
+            else:
+                print("Opção inválida! Tente novamente.")
 
     def executar(self):
         """
@@ -91,4 +88,3 @@ class CalculadoraAreaCultura:
         else:
             print("Falha no cálculo da área.")
             return None  # Retorna None caso o cálculo da área falhe
-
