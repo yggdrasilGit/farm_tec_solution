@@ -142,5 +142,35 @@
                 "unidade": "kg"
             }
         ]
+    },
+    {
+        "cultura": "milho",
+        "area_plantada": 502654.8245743669,
+        "insumos_utilizados": [
+            {
+                "insumo": "Fertilizante 13",
+                "descricao": "Fertilizante de Potássio",
+                "quantidade_necessaria": 5026548.24574367,
+                "unidade": "kg"
+            },
+            {
+                "insumo": "Adubo 14",
+                "descricao": "Adubo de Alta Fertilidade",
+                "quantidade_necessaria": 1507964.4737231007,
+                "unidade": "kg"
+            },
+            {
+                "insumo": "Veneno 15",
+                "descricao": "Veneno para Insetos Voadores",
+                "quantidade_necessaria": 50265.482457436694,
+                "unidade": "litro"
+            },
+            {
+                "insumo": "Semente 2",
+                "descricao": "Semente de Milho",
+                "quantidade_necessaria": 4523893.421169302,
+                "unidade": "kg"
+            }
+        ]
     }
 ]
