@@ -4,7 +4,13 @@ import json
 from tabulate import tabulate
 
 class RScriptLoader:
+    """
+    Classe para carregar e executar scripts R, além de processar arquivos JSON
+    gerados após a execução do script.
+    """
+    
     def __init__(self, nome_script):
+        """Inicializa a classe com o nome do script R."""
         self.script_path = self.encontrar_arquivo(nome_script)
         self.json_path = None  # Definido depois da execução do script
 
@@ -29,7 +35,7 @@ class RScriptLoader:
             robjects.r.source(str(self.script_path))  # Executa o script R
             
             # Encontrar o arquivo JSON gerado após execução do script
-            self.json_path = self.encontrar_arquivo("estatistica.json")
+            self.json_path = self.encontrar_arquivo("dados/estatistica.json")
             if self.json_path:
                 return True
             else:
@@ -63,16 +69,16 @@ class RScriptLoader:
             print(f"❌ Erro ao carregar o arquivo JSON: {e}")
             return None
 
-
-    def chamar_estatistica():
-        """Configura e executa os scripts R e JSON."""
-        script_loader = RScriptLoader("script_statis.R")
-
-        # Rodar o script R e carregar o arquivo JSON gerado
-        sucesso = script_loader.carregar_script()
+    def chamar_estatistica(self):
+        """Configura e executa os scripts R e processa os dados JSON gerados."""
+        sucesso = self.carregar_script()
 
         if sucesso:
-            return script_loader.carregar_arquivo_json()
+            return self.carregar_arquivo_json()
         else:
             print("❌ Falha na execução do script R.")
             return None
+
+# Exemplo de como usar a classe
+# script_loader = RScriptLoader("R/script_statis.R")
+# dados_estatisticos = script_loader.carregar_script()

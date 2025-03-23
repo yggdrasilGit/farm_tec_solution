@@ -33,6 +33,6 @@ class RClimateDataLoader:
             return False
 
 # Exemplo de uso:
-if __name__ == "__main__":
-    loader = RClimateDataLoader()
-    loader.executar_script()
+# if __name__ == "__main__":
+#    loader = RClimateDataLoader()
+#    loader.executar_script()

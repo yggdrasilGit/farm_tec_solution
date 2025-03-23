@@ -72,7 +72,7 @@ class MeteorologistDataLoader:
 
 
 # Exemplo de uso:
-if __name__ == "__main__":
-    nome_arquivo = "clima_portugues.json"  # Nome do arquivo JSON
-    loader = MeteorologistDataLoader(nome_arquivo)
-    dados_clima = loader.carregar_arquivo_json()
+# if __name__ == "__main__":
+#     nome_arquivo = "clima_portugues.json"  # Nome do arquivo JSON
+#     loader = MeteorologistDataLoader(nome_arquivo)
+#     dados_clima = loader.carregar_arquivo_json()
