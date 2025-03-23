@@ -43,11 +43,32 @@ pytest
 
 ## 💁️ Estrutura do Projeto  
 ```plaintext
-├── src/                 # Código-fonte
-│   ├── main.py          # Arquivo principal
-│   ├── utils.py         # Funções auxiliares
-│   ├── config/          # Configurações do projeto
-│   ├── tests/           # Testes automatizados
+├── farm_tec_solution/                 # Código-fonte
+│   ├── __pycache__/          # arquivo binario
+│   ├── .Rproj.user         # estencao r
+│   ├── api_input_data/   # arquivos de carregar os scripts R
+|   │   ├── __pycache__
+|   │   ├── load_api_meteriologia.py # Executa a api climatica          
+│   ├── calculo           # Testes automatizados
+|   │   ├── __pycache__
+│   ├── dados  
+|   │   ├── __pycache__
+│   ├── displays  
+|   │   ├── __pycache__
+│   ├── env                 # ambientevirtual
+│   ├── manager/
+|   │   ├── __pycache__
+│   ├── R/
+|   │   ├── __pycache__
+│   ├── test
+|   │   ├── __pycache__
+│   ├── .gitattributes
+│   ├── .gitiginore
+│   ├── .RData
+│   ├── .Rhistory
+│   ├── enterprise_name.py
+│   ├── farm_tec_solution.Rproj
+│   ├── main.py
 │   ├── README.md        # Documentação
 │   ├── requirements.txt # Dependências do projeto
 ```

@@ -24,6 +24,7 @@ class Menu:
             print("4. Calcular Cultura")
             print("5. Relatorio Cultura")
             print("6. Relatorio Climatico")
+            print("7. Relatorio Estatistica")
             print("0. Sair")
             
             # Solicita ao usuário para escolher uma opção
@@ -55,8 +56,8 @@ class Menu:
                 nome_arquivo = "clima_portugues.json"  # Nome do arquivo JSON
                 loader = MeteorologistDataLoader(nome_arquivo)
                 dados_clima = loader.carregar_arquivo_json()
-            elif opcao == '6':
-                estatistica = RScriptLoader()
+            elif opcao == '7':
+                estatistica = RScriptLoader("R/script_statis.R")
                 estatistica.carregar_script()
             elif opcao == '0':
                 print("\nSaindo\n")
