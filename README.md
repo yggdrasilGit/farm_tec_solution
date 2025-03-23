@@ -67,70 +67,76 @@ pytest
 A estrutura do projeto é organizada da seguinte forma:
 
 ```plaintext
-├── farm_tec_solution/                 # Código-fonte
-│   ├── __pycache__/                   # Arquivos binários
-│   ├── .Rproj.user                    # Extensão R
-│   ├── api_input_data/                # Scripts para carregar dados da API
-│   │   ├── __pycache__/               # Arquivos binários
-│   │   ├── load_api_meteriologia.py   # Executa a API climática
-│   │   ├── load_api_meteriologist.py
-│   │   ├── load_data_statis.py
-│   │   ├── load_api_geolocalizaca.py
-│   ├── calculo/                       # Testes automatizados
-│   │   ├── __pycache__/               # Arquivos binários
-│   │   ├── calcular_area.py
-│   │   ├── calcular_insumo.py
-│   ├── dados/                          # Dados do projeto
-│   │   ├── __pycache__/               # Arquivos binários
-│   │   ├── area_plantada.json
-│   │   ├── cidade.json
-│   │   ├── clima_portugues.json
-│   │   ├── culturas.json
-│   │   ├── dados_climatios.json
-│   │   ├── insumos.json
-│   │   ├── latitude_longitude.json
-│   │   ├── resultado.json
-│   ├── displays/                       # Exibição de dados
-│   │   ├── __pycache__/               # Arquivos binários
-│   │   ├── display_area.py
-│   │   ├── display_cadastro_cultura.py
-│   │   ├── display_cultura.py
-│   │   ├── display_insumo.py
-│   │   ├── display_meteriologica.py
-│   │   ├── display_principal.py
-│   │   ├── display_stats.py
-│   ├── env                             # Ambiente virtual
-│   ├── manager/                        # Gerenciamento de insumos
-│   │   ├── __pycache__/               # Arquivos binários
-│   │   ├── adubo_manager.py
-│   │   ├── area_manager.py
-│   │   ├── culture_manager.py
-│   │   ├── fertilizante_manager.py
-│   │   ├── insumo_manage.py
-│   │   ├── insumos_manager.py
-│   │   ├── semente_manager.py
-│   │   ├── veneno_manager.py
-│   ├── R/                              # Scripts R para cálculos
-│   │   ├── api_climatic.R
-│   │   ├── funcoes.R
-│   │   ├── script_geolocalizaton.R
-│   │   ├── script_statis.R
-│   │   ├── data_visulizaton_cultura.Rmd
-│   ├── test/                           # Testes
-│   │   ├── __pycache__/               # Arquivos binários
-│   │   ├── teste_araa_manager.py
-│   │   ├── teste_cultura_manager.py
-│   │   ├── teste_fertilizante_manager.py
-│   │   ├── teste_isumo.py
-│   ├── .gitattributes                 # Configurações do Git
-│   ├── .gitignore                     # Ignora arquivos não desejados no Git
-│   ├── .RData                         # Dados R
-│   ├── .Rhistory                      # Histórico R
-│   ├── enterprise_name.py             # Nome da empresa
-│   ├── farm_tec_solution.Rproj        # Projeto R
-│   ├── main.py                        # Arquivo principal do projeto
-│   ├── README.md                      # Documentação
-│   ├── requirements.txt               # Dependências do projeto
+# Estrutura do Projeto: Farm Tech Solution
+
+Abaixo está a estrutura de diretórios e arquivos do projeto:
+
+```plaintext
+├── farm_tec_solution/                         # Código-fonte principal
+│   ├── __pycache__/                           # Arquivos binários compilados
+│   ├── .Rproj.user                            # Arquivo de configuração R
+│   ├── api_input_data/                        # Scripts para carregar dados da API
+│   │   ├── __pycache__/                       # Arquivos binários
+│   │   ├── load_api_meteriologia.py          # Executa a API climática
+│   │   ├── load_api_meteriologist.py         # Carrega dados meteorológicos
+│   │   ├── load_data_statis.py               # Carrega dados estatísticos
+│   │   ├── load_api_geolocalizaca.py         # Carrega dados de geolocalização
+│   ├── calculo/                               # Cálculos e testes automatizados
+│   │   ├── __pycache__/                       # Arquivos binários
+│   │   ├── calcular_area.py                  # Cálculos de áreas plantadas
+│   │   ├── calcular_insumo.py                # Cálculos de insumos
+│   ├── dados/                                  # Dados do projeto
+│   │   ├── __pycache__/                       # Arquivos binários
+│   │   ├── area_plantada.json                # Dados de áreas plantadas
+│   │   ├── cidade.json                       # Dados de cidades
+│   │   ├── clima_portugues.json              # Dados climáticos em português
+│   │   ├── culturas.json                     # Dados sobre culturas
+│   │   ├── dados_climatios.json              # Dados meteorológicos
+│   │   ├── insumos.json                      # Dados de insumos
+│   │   ├── latitude_longitude.json           # Coordenadas geográficas
+│   │   ├── resultado.json                    # Resultados de cálculos
+│   ├── displays/                              # Scripts para exibição de dados
+│   │   ├── __pycache__/                       # Arquivos binários
+│   │   ├── display_area.py                   # Exibição de áreas plantadas
+│   │   ├── display_cadastro_cultura.py       # Exibição do cadastro de culturas
+│   │   ├── display_cultura.py                # Exibição de culturas
+│   │   ├── display_insumo.py                 # Exibição de insumos
+│   │   ├── display_meteriologica.py          # Exibição de dados climáticos
+│   │   ├── display_principal.py              # Tela principal
+│   │   ├── display_stats.py                  # Exibição de estatísticas
+│   ├── env                                     # Ambiente virtual
+│   ├── manager/                                # Gerenciamento de insumos
+│   │   ├── __pycache__/                       # Arquivos binários
+│   │   ├── adubo_manager.py                  # Gerenciamento de adubos
+│   │   ├── area_manager.py                   # Gerenciamento de áreas
+│   │   ├── culture_manager.py                # Gerenciamento de culturas
+│   │   ├── fertilizante_manager.py           # Gerenciamento de fertilizantes
+│   │   ├── insumo_manage.py                  # Gerenciamento de insumos
+│   │   ├── insumos_manager.py                # Gerenciamento de insumos
+│   │   ├── semente_manager.py                # Gerenciamento de sementes
+│   │   ├── veneno_manager.py                 # Gerenciamento de venenos
+│   ├── R/                                      # Scripts R para cálculos
+│   │   ├── api_climatic.R                    # Função para chamada da API climática
+│   │   ├── funcoes.R                          # Funções auxiliares
+│   │   ├── script_geolocalizaton.R           # Geolocalização
+│   │   ├── script_statis.R                   # Scripts para cálculos estatísticos
+│   │   ├── data_visulizaton_cultura.Rmd      # Visualização de dados de cultura
+│   ├── test/                                   # Testes automatizados
+│   │   ├── __pycache__/                       # Arquivos binários
+│   │   ├── teste_araa_manager.py             # Teste do manager de áreas
+│   │   ├── teste_cultura_manager.py          # Teste do manager de culturas
+│   │   ├── teste_fertilizante_manager.py     # Teste do manager de fertilizantes
+│   │   ├── teste_isumo.py                    # Teste do manager de insumos
+│   ├── .gitattributes                         # Arquivo de configurações do Git
+│   ├── .gitignore                             # Ignora arquivos não rastreados no Git
+│   ├── .RData                                 # Dados R
+│   ├── .Rhistory                              # Histórico de comandos R
+│   ├── enterprise_name.py                     # Nome da empresa
+│   ├── farm_tec_solution.Rproj                # Arquivo do projeto R
+│   ├── main.py                                # Arquivo principal para execução
+│   ├── README.md                              # Documentação do projeto
+│   ├── requirements.txt                       # Dependências do projeto
+
 ```
 
 ## 📄 Licença  
