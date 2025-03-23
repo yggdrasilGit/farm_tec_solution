@@ -134,7 +134,7 @@ A estrutura do projeto é organizada da seguinte forma:
 ```
 
 ## 📄 Licença  
-Este projeto está licenciado sob a **MIT License**. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+Este projeto está licenciado sob a **MIT License**. Para qualquer cidadao.
 
 ## 🤝 Contribuindo  
 Este projeto aceita contribuições! Se você deseja contribuir, siga estas etapas:
@@ -145,6 +145,6 @@ Este projeto aceita contribuições! Se você deseja contribuir, siga estas etap
 
 ## 📞 Contato  
 Se tiver dúvidas ou sugestões, entre em contato com o mantenedor do projeto:
-- **E-mail**: exemplo@email.com  
+- **E-mail**: yggdrasil.git@gmail.com  
 - **GitHub**: [@yggdrasilGit](https://github.com/yggdrasilGit)
 ```
