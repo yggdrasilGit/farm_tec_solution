@@ -1,46 +1,80 @@
-# Importando a classe Cultura de manager.culture_manager
 from manager.culture_manager import Cultura
 
 class MenuCultura:
+    """
+    Classe responsável por gerenciar o menu de culturas.
+    Permite cadastrar, visualizar, atualizar e remover culturas.
+    """
+    
     def __init__(self):
-        # Inicializando a cultura com uma lista vazia de culturas
-        self.cultura = Cultura()  # Tipo de cultura fixo
+        """
+        Inicializa a classe com uma instância de Cultura.
+        """
+        self.cultura = Cultura()
     
     def menu_cultura(self):
+        """
+        Exibe o menu interativo para o usuário e executa as ações escolhidas.
+        """
         while True:
-            # Exibe as opções do menu
-            print("\nMenu das culturas:")
+            print("\nMenu das Culturas:")
             print("1. Cadastrar Cultura")
             print("2. Visualizar Culturas")
-            print("3. Atualizar Culturas")
-            print("4. Remover Culturas")
+            print("3. Atualizar Cultura")
+            print("4. Remover Cultura")
             print("0. Sair")
             
-            # Solicita ao usuário para escolher uma opção
-            opcao = input("Escolha uma opção (1, 2 ou 3): ")
+            opcao = input("Escolha uma opção (0-4): ").strip()
             
             if opcao == '1':
-                self.cadastro()  # Adiciona cultura
+                self.cadastrar()
             elif opcao == '2':
-                self.visualizar() # Exibe as culturas cadastradas
+                self.visualizar()
             elif opcao == '3':
                 self.atualizar()
             elif opcao == '4':
                 self.remover()
             elif opcao == '0':
                 print("Saindo...")
-                break  # Sai do loop, encerrando o programa
+                break
             else:
                 print("Opção inválida! Por favor, escolha uma opção válida.")
-
-    def cadastro(self):
-        self.cultura.adicionar_cultura()
+    
+    def cadastrar(self):
+        """
+        Adiciona uma nova cultura.
+        """
+        try:
+            self.cultura.adicionar_cultura()
+            print("Cultura cadastrada com sucesso!")
+        except Exception as e:
+            print(f"Erro ao cadastrar cultura: {e}")
     
     def atualizar(self):
-        self.cultura.atualizar_cultura()
+        """
+        Atualiza uma cultura existente.
+        """
+        try:
+            self.cultura.atualizar_cultura()
+            print("Cultura atualizada com sucesso!")
+        except Exception as e:
+            print(f"Erro ao atualizar cultura: {e}")
     
     def remover(self):
-        self.cultura.remover_cultura()
+        """
+        Remove uma cultura cadastrada.
+        """
+        try:
+            self.cultura.remover_cultura()
+            print("Cultura removida com sucesso!")
+        except Exception as e:
+            print(f"Erro ao remover cultura: {e}")
     
     def visualizar(self):
-        self.cultura.mostrar_culturas()
+        """
+        Exibe todas as culturas cadastradas.
+        """
+        try:
+            self.cultura.mostrar_culturas()
+        except Exception as e:
+            print(f"Erro ao visualizar culturas: {e}")

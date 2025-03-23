@@ -1,37 +1,362 @@
 {
-    "Semente": {
-        "nome": "Semente",
-        "descricao": "Ab\u00e3\u00b3Bora",
+    "Semente 1": {
+        "nome": "Semente 1",
+        "descricao": "Semente de Abóbora",
         "quantidade": 60,
         "unidade": "kg"
     },
-    "Adubo": {
-        "nome": "Adubo",
-        "descricao": "Qu\u00e3\u00adMico",
+    "Semente 2": {
+        "nome": "Semente 2",
+        "descricao": "Semente de Milho",
+        "quantidade": 45,
+        "unidade": "kg"
+    },
+    "Semente 3": {
+        "nome": "Semente 3",
+        "descricao": "Semente de Feijão",
+        "quantidade": 50,
+        "unidade": "kg"
+    },
+    "Semente 4": {
+        "nome": "Semente 4",
+        "descricao": "Semente de Alface",
+        "quantidade": 40,
+        "unidade": "kg"
+    },
+    "Semente 5": {
+        "nome": "Semente 5",
+        "descricao": "Semente de Tomate",
+        "quantidade": 30,
+        "unidade": "kg"
+    },
+    "Semente 6": {
+        "nome": "Semente 6",
+        "descricao": "Semente de Cenoura",
+        "quantidade": 35,
+        "unidade": "kg"
+    },
+    "Semente 7": {
+        "nome": "Semente 7",
+        "descricao": "Semente de Alho",
+        "quantidade": 25,
+        "unidade": "kg"
+    },
+    "Semente 8": {
+        "nome": "Semente 8",
+        "descricao": "Semente de Beterraba",
+        "quantidade": 28,
+        "unidade": "kg"
+    },
+    "Semente 9": {
+        "nome": "Semente 9",
+        "descricao": "Semente de Pimentão",
+        "quantidade": 18,
+        "unidade": "kg"
+    },
+    "Semente 10": {
+        "nome": "Semente 10",
+        "descricao": "Semente de Pepino",
+        "quantidade": 32,
+        "unidade": "kg"
+    },
+    "Semente 11": {
+        "nome": "Semente 11",
+        "descricao": "Semente de Rúcula",
+        "quantidade": 40,
+        "unidade": "kg"
+    },
+    "Semente 12": {
+        "nome": "Semente 12",
+        "descricao": "Semente de Morango",
+        "quantidade": 60,
+        "unidade": "kg"
+    },
+    "Semente 13": {
+        "nome": "Semente 13",
+        "descricao": "Semente de Brócolis",
+        "quantidade": 50,
+        "unidade": "kg"
+    },
+    "Semente 14": {
+        "nome": "Semente 14",
+        "descricao": "Semente de Alho-poró",
+        "quantidade": 45,
+        "unidade": "kg"
+    },
+    "Semente 15": {
+        "nome": "Semente 15",
+        "descricao": "Semente de Ervilha",
+        "quantidade": 40,
+        "unidade": "kg"
+    },
+    "Adubo 1": {
+        "nome": "Adubo 1",
+        "descricao": "Adubo Orgânico",
         "quantidade": 24,
         "unidade": "kg"
     },
-    "Veneno": {
-        "nome": "Veneno",
-        "descricao": "Fungicida",
+    "Adubo 2": {
+        "nome": "Adubo 2",
+        "descricao": "Adubo de Compostagem",
+        "quantidade": 35,
+        "unidade": "kg"
+    },
+    "Adubo 3": {
+        "nome": "Adubo 3",
+        "descricao": "Adubo Químico",
+        "quantidade": 20,
+        "unidade": "kg"
+    },
+    "Adubo 4": {
+        "nome": "Adubo 4",
+        "descricao": "Adubo para Flores",
+        "quantidade": 30,
+        "unidade": "kg"
+    },
+    "Adubo 5": {
+        "nome": "Adubo 5",
+        "descricao": "Adubo para Frutas",
+        "quantidade": 40,
+        "unidade": "kg"
+    },
+    "Adubo 6": {
+        "nome": "Adubo 6",
+        "descricao": "Adubo para Hortas",
+        "quantidade": 35,
+        "unidade": "kg"
+    },
+    "Adubo 7": {
+        "nome": "Adubo 7",
+        "descricao": "Adubo Granulado",
+        "quantidade": 50,
+        "unidade": "kg"
+    },
+    "Adubo 8": {
+        "nome": "Adubo 8",
+        "descricao": "Adubo Biofós",
+        "quantidade": 45,
+        "unidade": "kg"
+    },
+    "Adubo 9": {
+        "nome": "Adubo 9",
+        "descricao": "Adubo Orgânico de Cavalo",
+        "quantidade": 55,
+        "unidade": "kg"
+    },
+    "Adubo 10": {
+        "nome": "Adubo 10",
+        "descricao": "Adubo de Cama de Galinha",
+        "quantidade": 30,
+        "unidade": "kg"
+    },
+    "Adubo 11": {
+        "nome": "Adubo 11",
+        "descricao": "Adubo de Lombriga",
+        "quantidade": 40,
+        "unidade": "kg"
+    },
+    "Adubo 12": {
+        "nome": "Adubo 12",
+        "descricao": "Adubo para Árvores Frutíferas",
+        "quantidade": 60,
+        "unidade": "kg"
+    },
+    "Adubo 13": {
+        "nome": "Adubo 13",
+        "descricao": "Adubo de Baixa Acidez",
+        "quantidade": 25,
+        "unidade": "kg"
+    },
+    "Adubo 14": {
+        "nome": "Adubo 14",
+        "descricao": "Adubo de Alta Fertilidade",
+        "quantidade": 20,
+        "unidade": "kg"
+    },
+    "Adubo 15": {
+        "nome": "Adubo 15",
+        "descricao": "Adubo de Longa Duração",
+        "quantidade": 15,
+        "unidade": "kg"
+    },
+    "Veneno 1": {
+        "nome": "Veneno 1",
+        "descricao": "Fungicida para Plantas",
         "quantidade": 8,
         "unidade": "litro"
     },
-    "fertilizante": {
-        "nome": "fertilizante",
-        "descricao": "Fertilizate Teste",
-        "quantidade": 20,
-        "unidade": "100",
-        "preco_unitario": 1000.0,
-        "tipo": "b",
-        "composicao": "agua",
-        "dosagem_recomendada": "20",
-        "tipo_insumo": "fertilizante"
+    "Veneno 2": {
+        "nome": "Veneno 2",
+        "descricao": "Herbicida para Grama",
+        "quantidade": 10,
+        "unidade": "litro"
     },
-    "adubo": {
-        "nome": "adubo",
-        "descricao": "adubo teste",
+    "Veneno 3": {
+        "nome": "Veneno 3",
+        "descricao": "Inseticida para Moscas",
+        "quantidade": 12,
+        "unidade": "litro"
+    },
+    "Veneno 4": {
+        "nome": "Veneno 4",
+        "descricao": "Fungicida para Tomates",
+        "quantidade": 6,
+        "unidade": "litro"
+    },
+    "Veneno 5": {
+        "nome": "Veneno 5",
+        "descricao": "Pesticida para Pragas",
+        "quantidade": 8,
+        "unidade": "litro"
+    },
+    "Veneno 6": {
+        "nome": "Veneno 6",
+        "descricao": "Veneno para Formigas",
+        "quantidade": 10,
+        "unidade": "litro"
+    },
+    "Veneno 7": {
+        "nome": "Veneno 7",
+        "descricao": "Veneno para Mosquitos",
+        "quantidade": 5,
+        "unidade": "litro"
+    },
+    "Veneno 8": {
+        "nome": "Veneno 8",
+        "descricao": "Veneno para Moscas de Estufa",
+        "quantidade": 9,
+        "unidade": "litro"
+    },
+    "Veneno 9": {
+        "nome": "Veneno 9",
+        "descricao": "Veneno para Larvas",
+        "quantidade": 15,
+        "unidade": "litro"
+    },
+    "Veneno 10": {
+        "nome": "Veneno 10",
+        "descricao": "Veneno para Cupins",
+        "quantidade": 7,
+        "unidade": "litro"
+    },
+    "Veneno 11": {
+        "nome": "Veneno 11",
+        "descricao": "Veneno para Lesmas",
+        "quantidade": 8,
+        "unidade": "litro"
+    },
+    "Veneno 12": {
+        "nome": "Veneno 12",
+        "descricao": "Veneno para Caracóis",
+        "quantidade": 6,
+        "unidade": "litro"
+    },
+    "Veneno 13": {
+        "nome": "Veneno 13",
+        "descricao": "Veneno para Ratos",
+        "quantidade": 10,
+        "unidade": "litro"
+    },
+    "Veneno 14": {
+        "nome": "Veneno 14",
+        "descricao": "Veneno para Aves",
+        "quantidade": 12,
+        "unidade": "litro"
+    },
+    "Veneno 15": {
+        "nome": "Veneno 15",
+        "descricao": "Veneno para Insetos Voadores",
+        "quantidade": 9,
+        "unidade": "litro"
+    },
+    "Fertilizante 1": {
+        "nome": "Fertilizante 1",
+        "descricao": "Fertilizante Líquido",
+        "quantidade": 10,
+        "unidade": "litro"
+    },
+    "Fertilizante 2": {
+        "nome": "Fertilizante 2",
+        "descricao": "Fertilizante Granulado",
+        "quantidade": 15,
+        "unidade": "kg"
+    },
+    "Fertilizante 3": {
+        "nome": "Fertilizante 3",
+        "descricao": "Fertilizante Orgânico",
         "quantidade": 20,
+        "unidade": "kg"
+    },
+    "Fertilizante 4": {
+        "nome": "Fertilizante 4",
+        "descricao": "Fertilizante de Ação Rápida",
+        "quantidade": 12,
+        "unidade": "kg"
+    },
+    "Fertilizante 5": {
+        "nome": "Fertilizante 5",
+        "descricao": "Fertilizante para Hortas",
+        "quantidade": 18,
+        "unidade": "kg"
+    },
+    "Fertilizante 6": {
+        "nome": "Fertilizante 6",
+        "descricao": "Fertilizante para Flores",
+        "quantidade": 22,
+        "unidade": "kg"
+    },
+    "Fertilizante 7": {
+        "nome": "Fertilizante 7",
+        "descricao": "Fertilizante para Árvores",
+        "quantidade": 25,
+        "unidade": "kg"
+    },
+    "Fertilizante 8": {
+        "nome": "Fertilizante 8",
+        "descricao": "Fertilizante para Plantas",
+        "quantidade": 30,
+        "unidade": "kg"
+    },
+    "Fertilizante 9": {
+        "nome": "Fertilizante 9",
+        "descricao": "Fertilizante para Frutas",
+        "quantidade": 28,
+        "unidade": "kg"
+    },
+    "Fertilizante 10": {
+        "nome": "Fertilizante 10",
+        "descricao": "Fertilizante de Ação Longa",
+        "quantidade": 35,
+        "unidade": "kg"
+    },
+    "Fertilizante 11": {
+        "nome": "Fertilizante 11",
+        "descricao": "Fertilizante de Cálcio",
+        "quantidade": 40,
+        "unidade": "kg"
+    },
+    "Fertilizante 12": {
+        "nome": "Fertilizante 12",
+        "descricao": "Fertilizante de Magnésio",
+        "quantidade": 50,
+        "unidade": "kg"
+    },
+    "Fertilizante 13": {
+        "nome": "Fertilizante 13",
+        "descricao": "Fertilizante de Potássio",
+        "quantidade": 45,
+        "unidade": "kg"
+    },
+    "Fertilizante 14": {
+        "nome": "Fertilizante 14",
+        "descricao": "Fertilizante de Fósforo",
+        "quantidade": 60,
+        "unidade": "kg"
+    },
+    "Fertilizante 15": {
+        "nome": "Fertilizante 15",
+        "descricao": "Fertilizante Completo",
+        "quantidade": 55,
         "unidade": "kg"
     }
 }

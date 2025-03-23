@@ -88,5 +88,59 @@
                 "unidade": "kg"
             }
         ]
+    },
+    {
+        "cultura": "Agriao",
+        "area_plantada": 400.0,
+        "insumos_utilizados": [
+            {
+                "insumo": "adubo",
+                "descricao": "adubo teste",
+                "quantidade_necessaria": 4000.0,
+                "unidade": "kg"
+            },
+            {
+                "insumo": "Veneno",
+                "descricao": "Fungicida",
+                "quantidade_necessaria": 4000.0,
+                "unidade": "litro"
+            },
+            {
+                "insumo": "Semente",
+                "descricao": "Abã³Bora",
+                "quantidade_necessaria": 4000.0,
+                "unidade": "kg"
+            }
+        ]
+    },
+    {
+        "cultura": "milho",
+        "area_plantada": 502654.8245743669,
+        "insumos_utilizados": [
+            {
+                "insumo": "Fertilizante 8",
+                "descricao": "Fertilizante para Plantas",
+                "quantidade_necessaria": 5026548.24574367,
+                "unidade": "kg"
+            },
+            {
+                "insumo": "Adubo 9",
+                "descricao": "Adubo Orgânico de Cavalo",
+                "quantidade_necessaria": 10053096.49148734,
+                "unidade": "kg"
+            },
+            {
+                "insumo": "Veneno 6",
+                "descricao": "Veneno para Formigas",
+                "quantidade_necessaria": 15079644.737231007,
+                "unidade": "litro"
+            },
+            {
+                "insumo": "Semente 12",
+                "descricao": "Semente de Morango",
+                "quantidade_necessaria": 5026548.24574367,
+                "unidade": "kg"
+            }
+        ]
     }
 ]

@@ -8,11 +8,12 @@ from manager.veneno_manage import Veneno
 class InsumoManager:
     def __init__(self, arquivo="dados/insumos.json"):
         self.arquivo = arquivo
+        self.insumo_salvar = "dados/resultados.json"
         self.insumos = self.carregar_dados()
 
     def salvar_dados(self):
         """Salva os dados dos insumos no arquivo JSON."""
-        with open(self.arquivo, 'w') as f:
+        with open(self.insumo_salvar, 'w') as f:
             # Convertendo a lista de objetos para um dicionário serializável
             insumos_serializados = {insumo.nome: insumo.to_dict() for insumo in self.insumos}
             json.dump(insumos_serializados, f, indent=4)
