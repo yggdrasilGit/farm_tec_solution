@@ -1,4 +1,3 @@
-```markdown
 # Farm Tech Solution
 
 ## 📌 Descrição  
@@ -154,4 +153,3 @@ Este projeto aceita contribuições! Se você deseja contribuir, siga estas etap
 Se tiver dúvidas ou sugestões, entre em contato com o mantenedor do projeto:
 - **E-mail**: yggdrasil.git@gmail.com  
 - **GitHub**: [@yggdrasilGit](https://github.com/yggdrasilGit)
-```
