@@ -73,19 +73,55 @@ A estrutura do projeto é organizada da seguinte forma:
 │   ├── api_input_data/                # Scripts para carregar dados da API
 │   │   ├── __pycache__/               # Arquivos binários
 │   │   ├── load_api_meteriologia.py   # Executa a API climática
+│   │   ├── load_api_meteriologist.py
+│   │   ├── load_data_statis.py
+│   │   ├── load_api_geolocalizaca.py
 │   ├── calculo/                       # Testes automatizados
 │   │   ├── __pycache__/               # Arquivos binários
+│   │   ├── calcular_area.py
+│   │   ├── calcular_insumo.py
 │   ├── dados/                          # Dados do projeto
 │   │   ├── __pycache__/               # Arquivos binários
+│   │   ├── area_plantada.json
+│   │   ├── cidade.json
+│   │   ├── clima_portugues.json
+│   │   ├── culturas.json
+│   │   ├── dados_climatios.json
+│   │   ├── insumos.json
+│   │   ├── latitude_longitude.json
+│   │   ├── resultado.json
 │   ├── displays/                       # Exibição de dados
 │   │   ├── __pycache__/               # Arquivos binários
+│   │   ├── display_area.py
+│   │   ├── display_cadastro_cultura.py
+│   │   ├── display_cultura.py
+│   │   ├── display_insumo.py
+│   │   ├── display_meteriologica.py
+│   │   ├── display_principal.py
+│   │   ├── display_stats.py
 │   ├── env                             # Ambiente virtual
 │   ├── manager/                        # Gerenciamento de insumos
 │   │   ├── __pycache__/               # Arquivos binários
+│   │   ├── adubo_manager.py
+│   │   ├── area_manager.py
+│   │   ├── culture_manager.py
+│   │   ├── fertilizante_manager.py
+│   │   ├── insumo_manage.py
+│   │   ├── insumos_manager.py
+│   │   ├── semente_manager.py
+│   │   ├── veneno_manager.py
 │   ├── R/                              # Scripts R para cálculos
-│   │   ├── __pycache__/               # Arquivos binários
+│   │   ├── api_climatic.R
+│   │   ├── funcoes.R
+│   │   ├── script_geolocalizaton.R
+│   │   ├── script_statis.R
+│   │   ├── data_visulizaton_cultura.Rmd
 │   ├── test/                           # Testes
 │   │   ├── __pycache__/               # Arquivos binários
+│   │   ├── teste_araa_manager.py
+│   │   ├── teste_cultura_manager.py
+│   │   ├── teste_fertilizante_manager.py
+│   │   ├── teste_isumo.py
 │   ├── .gitattributes                 # Configurações do Git
 │   ├── .gitignore                     # Ignora arquivos não desejados no Git
 │   ├── .RData                         # Dados R
