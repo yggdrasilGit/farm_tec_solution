@@ -153,3 +153,6 @@ Este projeto aceita contribuições! Se você deseja contribuir, siga estas etap
 Se tiver dúvidas ou sugestões, entre em contato com o mantenedor do projeto:
 - **E-mail**: yggdrasil.git@gmail.com  
 - **GitHub**: [@yggdrasilGit](https://github.com/yggdrasilGit)
+
+- **E-mail**: beatrizpilecartedemelo@gmail.com
+- **GitHub**: [@BPilecarte](https://github.com/BPilecarte)
