@@ -151,8 +151,27 @@ Este projeto aceita contribuições! Se você deseja contribuir, siga estas etap
 
 ## 📞 Contato  
 Se tiver dúvidas ou sugestões, entre em contato com o mantenedor do projeto:
+- **rm**: rm562869
+- **Nome**: Francismar Alves Martins Junior
 - **E-mail**: yggdrasil.git@gmail.com  
 - **GitHub**: [@yggdrasilGit](https://github.com/yggdrasilGit)
 
+- **rm**:  rm564952
+- **Nome**: Beatriz Pilecarte de Melo
 - **E-mail**: beatrizpilecartedemelo@gmail.com
 - **GitHub**: [@BPilecarte](https://github.com/BPilecarte)
+
+- **rm**: 
+- **Nome**: 
+- **E-mail**: antonio.anbarros@gmail.com
+- **GitHub**: [@AntonioBarros19](https://github.com/AntonioBarros19)
+
+- **rm**:  rm562099
+- **Nome**:  Vitor Eiji Fenandes Teruia
+- **E-mail**: vitorfer2018@gmail.com
+- **GitHub**: [@Vitor985-hub](https://github.com/Vitor985-hub)
+
+- **rm**: 
+- **Nome**: 
+- **E-mail**: 
+- **GitHub**: 
