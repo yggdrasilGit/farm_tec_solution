@@ -172,5 +172,35 @@
                 "unidade": "kg"
             }
         ]
+    },
+    {
+        "cultura": "Agriao",
+        "area_plantada": 400.0,
+        "insumos_utilizados": [
+            {
+                "insumo": "Fertilizante 2",
+                "descricao": "Fertilizante Granulado",
+                "quantidade_necessaria": 4800.0,
+                "unidade": "kg"
+            },
+            {
+                "insumo": "Adubo 1",
+                "descricao": "Adubo Orgânico",
+                "quantidade_necessaria": 4800.0,
+                "unidade": "kg"
+            },
+            {
+                "insumo": "Veneno 2",
+                "descricao": "Herbicida para Grama",
+                "quantidade_necessaria": 4800.0,
+                "unidade": "litro"
+            },
+            {
+                "insumo": "Semente 1",
+                "descricao": "Semente de Abóbora",
+                "quantidade_necessaria": 4800.0,
+                "unidade": "kg"
+            }
+        ]
     }
 ]
