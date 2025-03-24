@@ -15,7 +15,6 @@ class InsumoMenu:
             print("2. Listar Insumos")
             print("3. Atualizar Insumo")
             print("4. Deletar Insumo")
-            print("5. Buscar Insumo")
             print("0. Sair")
             
             escolha = input("Escolha uma opção: ").strip()
