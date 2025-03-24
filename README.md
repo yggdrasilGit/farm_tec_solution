@@ -171,7 +171,7 @@ Se tiver dúvidas ou sugestões, entre em contato com o mantenedor do projeto:
 - **E-mail**: vitorfer2018@gmail.com
 - **GitHub**: [@Vitor985-hub](https://github.com/Vitor985-hub)
 
-- **rm**: 
-- **Nome**: 
-- **E-mail**: 
-- **GitHub**: 
+- **rm**: 562915
+- **Nome**: Claudio Santos Silva
+- **E-mail**: claudiossilva93@gmail.com
+- **GitHub**: [claudiossilva93](https://github.com/claudiossilva93)s

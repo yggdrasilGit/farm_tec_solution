@@ -359,15 +359,10 @@
         "quantidade": 55,
         "unidade": "kg"
     },
-    "fertilizante": {
-        "nome": "fertilizante",
-        "descricao": "fungicida",
-        "quantidade": 10,
-        "unidade": "kg",
-        "preco_unitario": 20.0,
-        "tipo": "biologico",
-        "composicao": "combate de fungos",
-        "dosagem_recomendada": "4",
-        "tipo_insumo": "fertilizante"
+    "insumo": {
+        "nome": "insumo",
+        "descricao": "fertilizante",
+        "quantidade": 3,
+        "unidade": "kg"
     }
 }

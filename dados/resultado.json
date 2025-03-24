@@ -202,5 +202,65 @@
                 "unidade": "kg"
             }
         ]
+    },
+    {
+        "cultura": "tomate",
+        "area_plantada": 5026.548245743669,
+        "insumos_utilizados": [
+            {
+                "insumo": "Fertilizante 4",
+                "descricao": "Fertilizante de Ação Rápida",
+                "quantidade_necessaria": 5026.548245743669,
+                "unidade": "kg"
+            },
+            {
+                "insumo": "Adubo 4",
+                "descricao": "Adubo para Flores",
+                "quantidade_necessaria": 10053.096491487338,
+                "unidade": "kg"
+            },
+            {
+                "insumo": "Veneno 10",
+                "descricao": "Veneno para Cupins",
+                "quantidade_necessaria": 25132.741228718347,
+                "unidade": "litro"
+            },
+            {
+                "insumo": "Semente 5",
+                "descricao": "Semente de Tomate",
+                "quantidade_necessaria": 10053.096491487338,
+                "unidade": "kg"
+            }
+        ]
+    },
+    {
+        "cultura": "alface",
+        "area_plantada": 7921.0,
+        "insumos_utilizados": [
+            {
+                "insumo": "Fertilizante 1",
+                "descricao": "Fertilizante Líquido",
+                "quantidade_necessaria": 237630.0,
+                "unidade": "litro"
+            },
+            {
+                "insumo": "Adubo 1",
+                "descricao": "Adubo Orgânico",
+                "quantidade_necessaria": 396050.0,
+                "unidade": "kg"
+            },
+            {
+                "insumo": "Veneno 10",
+                "descricao": "Veneno para Cupins",
+                "quantidade_necessaria": 15842.0,
+                "unidade": "litro"
+            },
+            {
+                "insumo": "Semente 4",
+                "descricao": "Semente de Alface",
+                "quantidade_necessaria": 79210.0,
+                "unidade": "kg"
+            }
+        ]
     }
 ]
